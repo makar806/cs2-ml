@@ -1,0 +1,10 @@
+<View>
+  <Image name="image" value="$image"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="T" background="#ef4444"/>
+    <Label value="CT" background="#3b82f6"/>
+  </RectangleLabels>
+  <KeyPointLabels name="head" toName="image">
+    <Label value="Head" background="#22c55e" model_index="0"/>
+  </KeyPointLabels>
+</View>

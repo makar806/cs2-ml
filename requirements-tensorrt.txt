@@ -1,0 +1,4 @@
+-r requirements.txt
+tensorrt-cu12==10.13.3.9
+onnx==1.23.2
+onnxslim==0.1.98
