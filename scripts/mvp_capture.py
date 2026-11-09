@@ -1,55 +1,43 @@
 """Explicit capture selection. DXGI never silently falls back to slow MSS."""
-
-from mvp_windows import USER, Capture, client_rect, foreground
-
+from mvp_windows import Capture,client_rect,foreground,USER
 
 class DesktopCapture:
-    def __init__(self, hwnd, hz):
-        self.hwnd = hwnd
-        self.inner = Capture(hz, "dxcam")
-        self.warm_region = (
-            0,
-            0,
-            min(1280, USER.GetSystemMetrics(0)),
-            min(960, USER.GetSystemMetrics(1)),
-        )
+    def __init__(self,hwnd,hz):
+        self.hwnd=hwnd;self.inner=Capture(hz,'dxcam')
+        self.warm_region=(0,0,min(1280,USER.GetSystemMetrics(0)),min(960,USER.GetSystemMetrics(1)))
         self.inner.set_region(self.warm_region)
 
-    def bind(self, hwnd):
-        self.hwnd = hwnd
+    def bind(self,hwnd):self.hwnd=hwnd
 
     def warm_frame(self):
+        # Prepare graphics resources while the panel is foreground. No images
+        # are saved or sent out; only the game's verified foreground can control.
         if foreground(self.hwnd):
-            rect = client_rect(self.hwnd)
-            if rect is not None:
-                self.inner.set_region(rect)
+            rect=client_rect(self.hwnd)
+            if rect is not None:self.inner.set_region(rect)
         return self.inner.get()
 
     @property
-    def last_ms(self):
-        return self.inner.last_ms
+    def last_ms(self):return self.inner.last_ms
 
     @property
-    def error(self):
-        return self.inner.error
+    def error(self):return self.inner.error
 
     def get(self):
-        if not foreground(self.hwnd):
-            return None
-        rect = client_rect(self.hwnd)
-        self.inner.set_region(rect)
-        frame = self.inner.get()
-        return frame if frame is not None and frame[3] == rect else None
+        if not foreground(self.hwnd):return None
+        rect=client_rect(self.hwnd);self.inner.set_region(rect)
+        frame=self.inner.get()
+        return frame if frame is not None and frame[3]==rect else None
 
-    def close(self):
-        self.inner.close()
+    def close(self):self.inner.close()
 
+    def drain_slow_grabs(self):
+        while self.inner.slow_grabs:
+            yield self.inner.slow_grabs.popleft()
 
-def create_capture(hwnd, hz, backend):
-    if backend == "dxgi":
-        return DesktopCapture(hwnd, hz)
-    if backend == "wgc":
+def create_capture(hwnd,hz,backend):
+    if backend=='dxgi':return DesktopCapture(hwnd,hz)
+    if backend=='wgc':
         from mvp_wgc import WindowCapture
-
-        return WindowCapture(hwnd, hz)
-    raise ValueError(f"Unknown capture backend: {backend}")
+        return WindowCapture(hwnd,hz)
+    raise ValueError(f'Unknown capture backend: {backend}')

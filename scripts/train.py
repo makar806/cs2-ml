@@ -1,49 +1,25 @@
 import argparse
 from pathlib import Path
-
-from dataset_config import resolve_dataset
+import yaml
 from ultralytics import YOLO
 
 ROOT = Path(__file__).resolve().parents[1]
 
-
-def main():
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", default=str(ROOT / "configs/dataset.yaml"))
-    parser.add_argument("--weights", default=str(ROOT / "models/best.pt"))
-    parser.add_argument("--epochs", type=int, default=30)
-    parser.add_argument("--batch", type=int, default=8)
-    parser.add_argument("--imgsz", type=int, default=960)
-    parser.add_argument("--device", default="0")
-    parser.add_argument("--name", default="training")
+    parser.add_argument('--epochs', type=int, default=50)
+    parser.add_argument('--batch', type=int, default=8)
     args = parser.parse_args()
-    YOLO(args.weights, task="pose").train(
-        data=str(resolve_dataset(args.data)),
-        epochs=args.epochs,
-        batch=args.batch,
-        imgsz=args.imgsz,
-        device=args.device,
-        workers=0,
-        seed=42,
-        deterministic=True,
-        amp=True,
-        patience=20,
-        cache=False,
-        project=str(ROOT / "runs"),
-        name=args.name,
-        degrees=0,
-        translate=0.1,
-        scale=0.3,
-        fliplr=0.5,
-        flipud=0,
-        mosaic=0.5,
-        close_mosaic=10,
-        mixup=0,
-        plots=True,
-        optimizer="AdamW",
-        lr0=0.001,
-    )
-
-
-if __name__ == "__main__":
-    main()
+    config = yaml.safe_load((ROOT / 'configs/dataset.yaml').read_text())
+    config['path'] = str(ROOT / 'data/dataset')
+    for split in ('train', 'val'):
+        folder = Path(config['path']) / config[split]
+        if not folder.is_dir() or not any(folder.iterdir()):
+            raise SystemExit(f'Prepare labeled dataset first: {folder}')
+    resolved = ROOT / 'runs/dataset-resolved.yaml'
+    resolved.parent.mkdir(exist_ok=True)
+    resolved.write_text(yaml.safe_dump(config), encoding='utf-8')
+    model = YOLO(str(ROOT / 'models/yolo11n.pt'))
+    model.train(data=str(resolved), epochs=args.epochs, batch=args.batch,
+                imgsz=640, device=0, workers=0, seed=42,
+                project=str(ROOT / 'runs'), name='detector')

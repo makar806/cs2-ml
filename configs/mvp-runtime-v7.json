@@ -1,0 +1,8 @@
+{
+  "engine_approved": true,
+  "engine_sha256": "e85d1a9321c41adc521e3347a09c83ff1fb1ff6467a7c45089b4660324d0fde5",
+  "imgsz": 1280,
+  "evidence": "runs/mvp-optimization/inference.json",
+  "export": "TensorRT 10.13.3.9 FP16 dynamic, opt 1x3x736x1280, batch1, workspace1GiB",
+  "weights_sha256": "e4c45943215d941ed4b9816ce342d6aa772512a3057622cd567bc6d6427f6f67"
+}

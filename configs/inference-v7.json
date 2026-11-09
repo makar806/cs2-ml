@@ -1,0 +1,7 @@
+{
+  "weights": "runs/pose-v7/weights/best.pt",
+  "imgsz": 1280,
+  "confidence": 0.25,
+  "device": 0,
+  "purpose": "Offline prototype candidate. Selected using repeatedly inspected diagnostic checks; requires fresh held-out evaluation before claiming general quality."
+}
