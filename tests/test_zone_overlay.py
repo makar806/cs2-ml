@@ -1,4 +1,9 @@
-import sys,tkinter as tk
+import sys
+import os
+import pytest
+if os.name != 'nt':
+    pytest.skip('Real Windows overlay/window styles', allow_module_level=True)
+import tkinter as tk
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from mvp_zone_overlay import ZoneOverlay

@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 from queue import Empty,Full
+from mvp_logging import open_log
 import re
 import time
 import traceback
@@ -88,15 +89,23 @@ def inference_process(config,stop,packets,status,active=None):
         hwnd=None;last_find=0;last_frame=-1;last_predict=0;total=0;previous=None;last_memory=0;low_memory=False
         warm_predictions=0;warm_size=None;announced_ready=False;last_status=0;durations=deque(maxlen=9)
         feed=None;last_feed_frame=-1;feed_ms=0
+        feed_status='disabled'
+        hud=None;hud_signal={};hud_ms=0.
+        if config.get('weapon_hud'):
+            from mvp_hud import HudReader
+            hud=HudReader(ROOT/'work/hud')
         if config.get('death_source','manual')=='visual' and config['pipeline']=='full' and config['mode']=='local-bots':
             from mvp_killfeed import VisualKillFeed
             template=ROOT/'work/killfeed/self-name.png'
             if template.exists():
                 feed=VisualKillFeed.load(template)
+                feed_status='template_loaded'
                 latest_put(status,{'visual_feed_status':'Плашка: шаблон CT загружен'})
-            else:latest_put(status,{'visual_feed_status':'Плашка: нужна калибровка ника; F7 — ручной сброс'})
-        log=(output/'frames.jsonl').open('w',encoding='utf-8')
-        events=(output/'capture-events.jsonl').open('w',encoding='utf-8')
+            else:
+                feed_status='template_missing'
+                latest_put(status,{'visual_feed_status':'Плашка: нужна калибровка ника; F7 — ручной сброс'})
+        log=open_log(output/'frames.jsonl',config.get('async_logs',True))
+        events=open_log(output/'capture-events.jsonl',config.get('async_logs',True))
         while not stop.is_set():
             now=time.perf_counter()
             if now-last_find>1 and (not hwnd or not USER.IsWindow(hwnd)):
@@ -147,6 +156,10 @@ def inference_process(config,stop,packets,status,active=None):
             if frame is None:
                 time.sleep(.003);continue
             frame_id,captured,image,rect=frame
+            if hud is not None and focused and (active is None or active.is_set()):
+                hud_start=time.perf_counter()
+                hud_signal=hud.update(image,captured)
+                hud_ms=(time.perf_counter()-hud_start)*1000
             if feed is not None and focused and frame_id!=last_feed_frame:
                 last_feed_frame=frame_id
                 before_feed=time.perf_counter();previous_sample=feed.last_at
@@ -198,15 +211,18 @@ def inference_process(config,stop,packets,status,active=None):
                 continue
             durations.append(end-start);total+=1
             packet={'id':frame_id,'captured_at':captured,'hwnd':hwnd,'rect':rect,
+                    'inference_started_at':start,'inference_ended_at':end,
                     'detections':[asdict(d) for d in detections],'size':(image.shape[1],image.shape[0]),
                     'frames':total,'predict_ms':(end-start)*1000,'capture_ms':capture.last_ms,
                     'latency_ms':(end-captured)*1000,'fps':1/(end-previous) if previous else 0,
                     'model_backend':backend,'budget_hz':1/interval,'capture':capture_backend.upper(),
                     'capture_creations':session.creations,'predict_stages':getattr(model,'last_timings',{})}
+            packet.update(hud_signal,weapon_hud_ms=hud_ms,visual_feed_status=feed_status)
             if feed is not None:
                 signal=feed.snapshot()
                 packet.update(visual_kill_sequence=signal['sequence'],visual_kill_at=signal['last_event'],
-                              visual_feed_rows=signal['rows'],visual_feed_ms=feed_ms)
+                              visual_feed_rows=signal['rows'],visual_feed_ms=feed_ms,
+                              visual_feed_sample_at=signal['sampled_at'])
             tracking_start=time.perf_counter()
             packet["visual_tracks"]=visual_tracking.update(image,detections,captured)
             packet["visual_tracking_ms"]=(time.perf_counter()-tracking_start)*1000
@@ -215,6 +231,10 @@ def inference_process(config,stop,packets,status,active=None):
             packet['camera_motion_ms']=(time.perf_counter()-camera_start)*1000
             packet['camera_motion_valid']=bool(packet['camera_steps'] and packet['camera_steps'][-1]['matrix'] is not None)
             packet['camera_scene_cut']=bool(packet['camera_steps'] and packet['camera_steps'][-1]['cut'])
+            packet['packet_ready_at']=time.perf_counter()
+            packet['capture_to_packet_ms']=(packet['packet_ready_at']-captured)*1000
+            if hasattr(log,'stats'):
+                packet['worker_log_health']={'frames':log.stats(),'capture':events.stats()}
             previous=end
             latest_put(packets,packet)
             log.write(json.dumps({'time':time.time(),**{k:v for k,v in packet.items() if k not in ('detections','camera_steps')},'detections':len(detections)})+'\n')
@@ -229,5 +249,8 @@ def inference_process(config,stop,packets,status,active=None):
             except Exception:pass
         if log:log.close()
         if events:events.close()
+        if hasattr(log,'stats') and hasattr(events,'stats'):
+            (output/'worker-log-health.json').write_text(json.dumps(
+                {'frames':log.stats(),'capture':events.stats()},indent=2),encoding='utf-8')
         if model is not None and hasattr(model,'close'):model.close()
         packets.cancel_join_thread();status.cancel_join_thread()

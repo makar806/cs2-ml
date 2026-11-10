@@ -1,4 +1,4 @@
-"""Capture lifetime is independent of F8/foreground; only Stop releases it."""
+"""Own a capture resource; the runtime releases it on focus loss or Stop."""
 import time
 
 

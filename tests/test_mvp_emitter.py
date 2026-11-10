@@ -3,6 +3,7 @@
 import io
 import sys
 import threading
+from types import SimpleNamespace
 from pathlib import Path
 
 import pytest
@@ -48,6 +49,8 @@ def engine(monkeypatch, tmp_path):
     e.last_motion_at = 0
     e.state = dict(moves=0, shots=0, input_error="")
     e.output = tmp_path
+    e.weapons = None
+    e.physical_keys = None
     monkeypatch.setattr(live, "foreground", lambda _: True)
     monkeypatch.setattr(live, "client_rect", lambda _: (0, 0, 1280, 720))
     return e
@@ -211,6 +214,14 @@ def test_stop_before_shot_can_be_disabled_explicitly(monkeypatch,tmp_path):
     assert e.state['shots']==1
 
 
+def authorize_weapon(e, at, ammo=30):
+    from mvp_weapon_state import WeaponState
+    if e.weapons is None:
+        e.weapons = WeaponState()
+    e.weapons.update(dict(weapon_name='weapon_ak47',weapon_sample_at=at,
+                          weapon_ammo=ammo,weapon_reloading=False,weapon_zoom=0))
+
+
 def test_side_button_toggles_spray_and_releases_owned_ctrl(monkeypatch, tmp_path):
     from mvp_zone_aim import ZoneController
 
@@ -218,32 +229,36 @@ def test_side_button_toggles_spray_and_releases_owned_ctrl(monkeypatch, tmp_path
     e.fire = True
     e.controller = ZoneController(e.settings)
     e.spray = live.AKSpray(e.settings.sensitivity)
-    e.spray_button = 6
+    e.spray_button = 5
+    e.physical_keys = SimpleNamespace(ctrl_generation=0,ctrl_down=lambda:False,left_ctrl_down=lambda:False)
     clock = [10.0]
-    held = {6}
+    held = {5}
     keyboard = []
     monkeypatch.setattr(live.time, 'perf_counter', lambda: clock[0])
     monkeypatch.setattr(live, 'key_down', held.__contains__)
     monkeypatch.setattr(live, 'set_key', lambda code, down: keyboard.append((code, down)))
     log = io.StringIO()
 
+    authorize_weapon(e,clock[0])
     e.send_pending(log, 1)
     assert e.spray.manual and e.mouse.holds == [(0, 0, True)]
     held.clear()
     clock[0] = 10.9
+    authorize_weapon(e,clock[0])
     e.send_pending(log, 2)
     assert e.spray.started is not None and not keyboard
     clock[0] = 11.01
+    authorize_weapon(e,clock[0])
     e.send_pending(log, 3)
     assert keyboard == [(0xA2, True)]
-    held.add(6)
+    held.add(5)
     e.send_pending(log, 4)
     assert e.mouse.released and e.spray.started is None
     assert keyboard == [(0xA2, True), (0xA2, False)]
     assert len(e.mouse.holds) == 1
 
 
-def test_zone_starts_one_burst_and_focus_loss_releases_it(monkeypatch, tmp_path):
+def test_manual_zone_burst_tracks_both_axes_and_focus_loss_releases_it(monkeypatch, tmp_path):
     from mvp_core import Detection
     from mvp_zone_aim import ZoneController
 
@@ -256,16 +271,19 @@ def test_zone_starts_one_burst_and_focus_loss_releases_it(monkeypatch, tmp_path)
     e.zone_context = dict(size=(1280, 720), rect=(0, 0, 1280, 720))
     clock = [1.0]
     monkeypatch.setattr(live.time, 'perf_counter', lambda: clock[0])
+    monkeypatch.setattr(live,'key_down',lambda code:code==5)
+    authorize_weapon(e,clock[0])
     target = Detection(0, .99, (620, 350, 660, 450), (640, 360), .99)
     e.controller.step([target], 1280, 720, 1, 1, enabled=True, foreground=True, fire=True)
     log = io.StringIO()
     e.send_pending(log, 1)
     e.send_pending(log, 1)
     assert e.mouse.holds == [(0, 0, True)] and e.state['shots'] == 1
-    e.controller.zone['velocity'] = (180., 0.)
+    e.controller.zone['velocity'] = (180., 180.)
     clock[0] += .012
     e.send_pending(log, 2)
     assert e.mouse.events[-1][0] > 0
+    assert e.mouse.events[-1][1] > 0
     assert not e.mouse.events[-1][2]
     assert e.mouse.holds == [(0, 0, True)]
     monkeypatch.setattr(live, 'foreground', lambda _: False)
@@ -273,7 +291,7 @@ def test_zone_starts_one_burst_and_focus_loss_releases_it(monkeypatch, tmp_path)
     assert e.mouse.released and e.spray.started is None
 
 
-def test_middle_distance_emits_two_taps_then_holds(monkeypatch, tmp_path):
+def test_middle_distance_emits_two_taps_then_continues_singles(monkeypatch, tmp_path):
     from mvp_core import Detection
     from mvp_zone_aim import ZoneController
 
@@ -292,6 +310,7 @@ def test_middle_distance_emits_two_taps_then_holds(monkeypatch, tmp_path):
 
     def run(at, y):
         clock[0] = at
+        authorize_weapon(e,at)
         target = Detection(0, .99, (620, y-10, 660, y+40), (640, y), .99)
         e.controller.step([target], 1280, 720, at, at, enabled=True, foreground=True, fire=True)
         e.send_pending(log, 1)
@@ -301,18 +320,8 @@ def test_middle_distance_emits_two_taps_then_holds(monkeypatch, tmp_path):
     assert e.mouse.events == [(0, 0, True)]
     run(1.2, 360)
     assert len(e.mouse.events) == 2 and not e.mouse.holds
-    run(1.41, 348.5)
-    assert e.mouse.holds == [(0, 0, True)]
-    acquired_at = e.controller.acquired_at
-    clock[0] += e.spray.max_duration + .01
-    end = clock[0]
-    # The scheduler also requires a fresh observation at the end of a magazine.
-    e.spray.last_visible = end
-    e.send_pending(log, 2)
-    assert e.spray.started is None
-    assert e.state['spray_stop_reason'] == 'profile_complete'
-    run(end + .50, 348.5)
-    assert len(e.mouse.holds) == 1
-    run(end + e.spray.reload_wait + .01, 348.5)
-    assert e.controller.acquired_at == acquired_at
-    assert len(e.mouse.holds) == 2
+    run(1.41, 360)
+    assert len(e.mouse.events) == 2
+    run(1.45, 360)
+    assert len(e.mouse.events) == 3
+    assert not e.mouse.holds and not e.spray.enabled

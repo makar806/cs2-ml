@@ -46,11 +46,11 @@ class WindowCapture:
 
     def _client(self,pixels,region):
         h,w=pixels.shape[:2];x,y,x2,y2=region;cw,ch=x2-x,y2-y
-        if (w,h)==(cw,ch):return np.ascontiguousarray(pixels[:,:,:3])
+        if (w,h)==(cw,ch):return pixels[:,:,:3].copy(order='C')
         key=(w,h,region)
         if self.crop_cache is not None and self.crop_cache[0]==key:
             ox,oy=self.crop_cache[1]
-            return np.ascontiguousarray(pixels[oy:oy+ch,ox:ox+cw,:3])
+            return pixels[oy:oy+ch,ox:ox+cw,:3].copy(order='C')
         bounds=W.RECT()
         dwm=C.WinDLL('dwmapi');dwm.DwmGetWindowAttribute.argtypes=[W.HWND,W.DWORD,C.c_void_p,W.DWORD]
         candidates=[]
@@ -63,7 +63,7 @@ class WindowCapture:
             ox,oy=x-left,y-top
             if (right-left,bottom-top)==(w,h) and 0<=ox and 0<=oy and ox+cw<=w and oy+ch<=h:
                 self.crop_cache=(key,(ox,oy))
-                return np.ascontiguousarray(pixels[oy:oy+ch,ox:ox+cw,:3])
+                return pixels[oy:oy+ch,ox:ox+cw,:3].copy(order='C')
         raise GeometryPending(f'WGC/client geometry mismatch: frame={w}x{h}, client={cw}x{ch}. Use windowed mode.')
 
     def get(self):

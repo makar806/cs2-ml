@@ -13,11 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def run(
-    profile, offset=200, speed=0, delay=0.03, hz=30, noise=0, duration=3, offset_y=0, speed_y=0, head_filter="current", fire_policy="verified"
+    profile, offset=200, speed=0, delay=0.03, hz=30, noise=0, duration=3, offset_y=0, speed_y=0, head_filter="current", fire_policy="verified", controller_type=None, turn_at=None
 ):
     if fire_policy=='zone':
         from mvp_zone_aim import ZoneController
-        controller=ZoneController(Settings(head_filter=head_filter,fire_policy='zone',shot_interval=.25),profile)
+        controller=(controller_type or ZoneController)(Settings(head_filter=head_filter,fire_policy='zone',shot_interval=.25),profile)
     else:controller = RecordedController(Settings(head_filter=head_filter), profile)
     motion = RecordedMotionPlan()
     history = MotionHistory()
@@ -40,11 +40,22 @@ def run(
     signed_errors = []
     corrections = []
     reasons = {}
+    first_close=None
+    close_since=None
+    settled=None
     for index in range(int(duration * 1000) + 1):
         now = 1 + index * 0.001
-        world = offset + speed * (now - 1)
-        world_y = offset_y + speed_y * (now - 1)
+        elapsed=now-1
+        travel=elapsed if turn_at is None or elapsed<=turn_at else 2*turn_at-elapsed
+        world = offset + speed * travel
+        world_y = offset_y + speed_y * travel
         actual, actual_y = project(world, world_y)
+        current_error=math.hypot(actual,actual_y)
+        if current_error<=5:
+            if first_close is None:first_close=elapsed
+            if close_since is None:close_since=elapsed
+            if settled is None and elapsed-close_since>=.2:settled=close_since
+        else:close_since=None
         signed_errors.append(actual)
         if now + 1e-9 >= next_capture:
             head = 640 + actual + noise * math.sin(index * 0.57)
@@ -84,6 +95,10 @@ def run(
                 controller.shot_emitted(now)
         if now > 1.7:
             errors.append(math.hypot(actual, actual_y))
+    ordered=sorted(errors)
+    def percentile(p):
+        at=(len(ordered)-1)*p;lo=math.floor(at);hi=math.ceil(at)
+        return ordered[lo]+(ordered[hi]-ordered[lo])*(at-lo)
     return dict(
         min_signed_error_x=min(signed_errors),
         max_signed_error_x=max(signed_errors),
@@ -92,6 +107,11 @@ def run(
         delay=delay,
         hz=hz,
         noise=noise,
+        turn_at=turn_at,
+        first_within_5px_seconds=first_close,
+        settled_within_5px_for_200ms_seconds=settled,
+        tracking_error_p50_px=percentile(.5),tracking_error_p95_px=percentile(.95),
+        tracking_error_p99_px=percentile(.99),
         offset_y=offset_y,
         speed_y=speed_y,
         shots=shots,

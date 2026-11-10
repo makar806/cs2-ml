@@ -126,5 +126,7 @@ class CameraLock:
                 if sum(v*v for v in shift)>(6*size[0]/1280)**2:
                     controller.projected_locked=rebased[0]
                     controller.head_filter.translate(*shift)
+                    if hasattr(controller,'body_filter'):
+                        controller.body_filter.translate(*shift)
                     controller.anchors=[]
         return reason

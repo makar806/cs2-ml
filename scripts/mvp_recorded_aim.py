@@ -387,6 +387,8 @@ class RecordedController(Controller):
                         old.head_score,
                     )
                     self.head_filter.translate(sx, sy)
+                    if hasattr(self,'body_filter'):
+                        self.body_filter.translate(sx, sy)
             self.anchors = usable
         if single_continuation:
             fire = False

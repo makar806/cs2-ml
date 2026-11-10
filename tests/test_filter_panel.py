@@ -2,13 +2,20 @@
 import sys
 from pathlib import Path
 from types import SimpleNamespace
+import pytest
+tk = pytest.importorskip('tkinter', reason='Tk is required for the real GUI check')
+from tkinter import ttk
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import live_mvp as live
 
 
 def test_panel_selector_applies_without_restart_and_default_is_one_euro(monkeypatch):
-    root=live.tk.Tk();root.withdraw()
-    monkeypatch.setattr(live.tk,'Tk',lambda:root)
+    try:
+        root=tk.Tk()
+    except tk.TclError:
+        pytest.skip('A display is required for the real GUI check')
+    root.withdraw()
+    monkeypatch.setattr(tk,'Tk',lambda:root)
     monkeypatch.setattr(root,'mainloop',lambda:None)
     class FakeEngine:
         def __init__(self,*args,**kwargs):
@@ -29,7 +36,7 @@ def test_panel_selector_applies_without_restart_and_default_is_one_euro(monkeypa
             for child in widget.winfo_children():
                 yield child
                 yield from descendants(child)
-        selector=next(w for w in descendants(root) if isinstance(w,live.ttk.Combobox) and str(w.cget('textvariable'))==str(app.head_filter))
+        selector=next(w for w in descendants(root) if isinstance(w,ttk.Combobox) and str(w.cget('textvariable'))==str(app.head_filter))
         selector.set('Текущий');selector.event_generate('<<ComboboxSelected>>')
         assert app.engine is engine and not engine.closed
         assert engine.changes==['current']

@@ -1,0 +1,1558 @@
+{
+  "archive_sha256": "26bc35302a5616e5e6680a0698a3de8a97f56e04846e2e854e021df5e943acef",
+  "stages": [
+    {
+      "run": "20261026-003839",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 3182,
+        "p50": 5.08625,
+        "p95": 10.126945000000001,
+        "p99": 10.913261,
+        "max": 19.8691,
+        "above_100ms": 0
+      },
+      "game_fps": 159.2190974771035,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 84.6,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-003839",
+      "stage": "capture_dxgi",
+      "frametime_ms": {
+        "n": 2810,
+        "p50": 5.42515,
+        "p95": 11.763129999999999,
+        "p99": 12.674674,
+        "max": 530.9733,
+        "above_100ms": 2
+      },
+      "game_fps": 140.52783013147936,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 85.0,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-003839",
+      "stage": "inference_dxgi",
+      "frametime_ms": {
+        "n": 2875,
+        "p50": 5.4485,
+        "p95": 11.651429999999998,
+        "p99": 13.38101999999999,
+        "max": 526.7493000000001,
+        "above_100ms": 1
+      },
+      "game_fps": 143.80702451846687,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 86.8,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-003839",
+      "stage": "capture_wgc",
+      "frametime_ms": {
+        "n": 2844,
+        "p50": 5.18825,
+        "p95": 10.505724999999998,
+        "p99": 12.905050000000001,
+        "max": 531.2166,
+        "above_100ms": 4
+      },
+      "game_fps": 142.3130456562513,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 84.7,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-003839",
+      "stage": "inference_wgc",
+      "frametime_ms": {
+        "n": 2490,
+        "p50": 5.38745,
+        "p95": 11.84192,
+        "p99": 13.531793000000004,
+        "max": 528.6506,
+        "above_100ms": 7
+      },
+      "game_fps": 124.64079860853631,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 87.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-005120",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 3443,
+        "p50": 4.666,
+        "p95": 9.618949999999998,
+        "p99": 10.143548000000001,
+        "max": 15.8938,
+        "above_100ms": 0
+      },
+      "game_fps": 172.13070070583663,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.3,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-005120",
+      "stage": "queries",
+      "frametime_ms": {
+        "n": 3426,
+        "p50": 4.678,
+        "p95": 9.626000000000001,
+        "p99": 10.02665,
+        "max": 20.6806,
+        "above_100ms": 0
+      },
+      "game_fps": 171.5364750383935,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.4,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-005120",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 3008,
+        "p50": 5.0619,
+        "p95": 11.12056,
+        "p99": 12.370062999999998,
+        "max": 526.7923000000001,
+        "above_100ms": 2
+      },
+      "game_fps": 150.4048640933051,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.4,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-005120",
+      "stage": "capture_wgc_fixed",
+      "frametime_ms": {
+        "n": 3127,
+        "p50": 4.8922,
+        "p95": 10.077869999999999,
+        "p99": 11.177448,
+        "max": 526.6407,
+        "above_100ms": 2
+      },
+      "game_fps": 156.34279572397293,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.1,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-005120",
+      "stage": "capture_mss_fixed",
+      "frametime_ms": {
+        "n": 2717,
+        "p50": 6.3997,
+        "p95": 11.293399999999998,
+        "p99": 13.195172000000007,
+        "max": 528.0802,
+        "above_100ms": 4
+      },
+      "game_fps": 135.86979962655028,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 82.9,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-011034",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 6069,
+        "p50": 5.8678,
+        "p95": 12.218719999999998,
+        "p99": 13.950383999999994,
+        "max": 531.4571000000001,
+        "above_100ms": 4
+      },
+      "game_fps": 134.9308841724476,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 81.4,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.5"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-012038",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 3288,
+        "p50": 4.8850999999999996,
+        "p95": 10.002354999999994,
+        "p99": 10.94529600000001,
+        "max": 16.7332,
+        "above_100ms": 0
+      },
+      "game_fps": 164.5288944038094,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 78.7,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-012038",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 2980,
+        "p50": 5.231249999999999,
+        "p95": 11.835484999999998,
+        "p99": 12.831308000000002,
+        "max": 15.1979,
+        "above_100ms": 0
+      },
+      "game_fps": 149.11534743142866,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.3,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-012038",
+      "stage": "capture_dxgi_legacy_fixed",
+      "frametime_ms": {
+        "n": 2950,
+        "p50": 5.1974,
+        "p95": 11.943855,
+        "p99": 13.115263999999998,
+        "max": 16.0954,
+        "above_100ms": 0
+      },
+      "game_fps": 147.61615176901958,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 78.9,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-012038",
+      "stage": "inference_replay",
+      "frametime_ms": {
+        "n": 3062,
+        "p50": 5.16855,
+        "p95": 11.474534999999996,
+        "p99": 13.158115999999994,
+        "max": 15.2244,
+        "above_100ms": 0
+      },
+      "game_fps": 153.2735662200198,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 81.0,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-013205",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 4928,
+        "p50": 8.703050000000001,
+        "p95": 15.10774,
+        "p99": 16.880869999999987,
+        "max": 518.308,
+        "above_100ms": 4
+      },
+      "game_fps": 109.55959634527512,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 82.7,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.6"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261026-014142",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 5974,
+        "p50": 6.201700000000001,
+        "p95": 12.721155,
+        "p99": 27.30817399999999,
+        "max": 34.8731,
+        "above_100ms": 0
+      },
+      "game_fps": 132.7838146069805,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.7,
+      "foreground_fraction": 0.9431818181818182,
+      "versions": [
+        "3.6"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261102-013917",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 5687,
+        "p50": 4.3199,
+        "p95": 10.448379999999997,
+        "p99": 19.55385800000003,
+        "max": 547.7873000000001,
+        "above_100ms": 22
+      },
+      "game_fps": 140.0284561854586,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 95.3,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.19"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-231747",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 6207,
+        "p50": 5.6409,
+        "p95": 11.7061,
+        "p99": 14.001032,
+        "max": 518.3106,
+        "above_100ms": 6
+      },
+      "game_fps": 137.95987742690528,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 89.6,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.24"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-232454",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 6209,
+        "p50": 5.1861,
+        "p95": 11.472919999999998,
+        "p99": 13.170992,
+        "max": 525.5761,
+        "above_100ms": 9
+      },
+      "game_fps": 138.03925862304533,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 89.3,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.25"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233206",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 4935,
+        "p50": 9.5801,
+        "p95": 13.718820000000004,
+        "p99": 16.051513999999997,
+        "max": 521.0985000000001,
+        "above_100ms": 4
+      },
+      "game_fps": 109.65633996361095,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 85.0,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.26"
+      ],
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233740",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 3152,
+        "p50": 4.70315,
+        "p95": 10.193619999999997,
+        "p99": 11.445089999999967,
+        "max": 26.8471,
+        "above_100ms": 0
+      },
+      "game_fps": 157.693520931056,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.1,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233740",
+      "stage": "queries",
+      "frametime_ms": {
+        "n": 3121,
+        "p50": 4.7752,
+        "p95": 10.254,
+        "p99": 11.615600000000002,
+        "max": 26.2009,
+        "above_100ms": 0
+      },
+      "game_fps": 156.0070972682162,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.2,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233740",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 2748,
+        "p50": 4.9885,
+        "p95": 11.34188,
+        "p99": 12.847612000000009,
+        "max": 513.4495000000001,
+        "above_100ms": 2
+      },
+      "game_fps": 137.39153118601766,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.6,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233740",
+      "stage": "capture_wgc_fixed",
+      "frametime_ms": {
+        "n": 2571,
+        "p50": 5.5825,
+        "p95": 11.015799999999999,
+        "p99": 12.536660000000017,
+        "max": 517.2874,
+        "above_100ms": 3
+      },
+      "game_fps": 130.46996137708553,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-233740",
+      "stage": "capture_mss_fixed",
+      "frametime_ms": {
+        "n": 2272,
+        "p50": 8.88625,
+        "p95": 12.700315,
+        "p99": 14.125448,
+        "max": 525.1246,
+        "above_100ms": 4
+      },
+      "game_fps": 113.5767468647306,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 79.6,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-234836",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 2434,
+        "p50": 11.647,
+        "p95": 13.893749999999999,
+        "p99": 15.340687,
+        "max": 26.6655,
+        "above_100ms": 0
+      },
+      "game_fps": 97.41571906366423,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.1,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261108-234836",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 1998,
+        "p50": 12.72705,
+        "p95": 15.732315,
+        "p99": 17.305222,
+        "max": 518.1713,
+        "above_100ms": 4
+      },
+      "game_fps": 79.90603306466848,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 83.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-024200",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 2044,
+        "p50": 4.3506,
+        "p95": 10.973315,
+        "p99": 20.940846999999994,
+        "max": 269.1592,
+        "above_100ms": 3
+      },
+      "game_fps": 170.57893572797644,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 96.6,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-024200",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 3946,
+        "p50": 4.9668,
+        "p95": 10.42035,
+        "p99": 12.292195000000003,
+        "max": 152.4151,
+        "above_100ms": 1
+      },
+      "game_fps": 158.6439210897903,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 96.7,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025025",
+      "stage": "baseline",
+      "frametime_ms": {
+        "n": 4515,
+        "p50": 3.4702,
+        "p95": 7.67283,
+        "p99": 8.265283999999994,
+        "max": 12.0609,
+        "above_100ms": 0
+      },
+      "game_fps": 225.94019306541932,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 74.1,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025025",
+      "stage": "queries",
+      "frametime_ms": {
+        "n": 4447,
+        "p50": 3.4861,
+        "p95": 7.77167,
+        "p99": 8.387688,
+        "max": 21.1142,
+        "above_100ms": 0
+      },
+      "game_fps": 222.34188118620844,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 74.0,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025025",
+      "stage": "capture_dxgi_fixed",
+      "frametime_ms": {
+        "n": 4038,
+        "p50": 3.69925,
+        "p95": 8.416839999999999,
+        "p99": 10.150016000000003,
+        "max": 525.5895,
+        "above_100ms": 2
+      },
+      "game_fps": 202.00480312193156,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 74.4,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025025",
+      "stage": "capture_wgc_fixed",
+      "frametime_ms": {
+        "n": 3842,
+        "p50": 3.8083,
+        "p95": 8.575895000000001,
+        "p99": 11.712409000000003,
+        "max": 527.7388,
+        "above_100ms": 2
+      },
+      "game_fps": 192.14670221670656,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 74.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025025",
+      "stage": "capture_mss_fixed",
+      "frametime_ms": {
+        "n": 3618,
+        "p50": 3.8682499999999997,
+        "p95": 8.874259999999989,
+        "p99": 12.40506199999999,
+        "max": 530.5927,
+        "above_100ms": 4
+      },
+      "game_fps": 180.89279684882945,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 74.3,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": null
+    },
+    {
+      "run": "20261109-025836",
+      "stage": "dxgi_30_first",
+      "frametime_ms": {
+        "n": 4305,
+        "p50": 4.2806,
+        "p95": 10.11252,
+        "p99": 11.702476,
+        "max": 520.8925,
+        "above_100ms": 2
+      },
+      "game_fps": 172.331728305136,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 86.8,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-025836",
+      "stage": "dxgi_20",
+      "frametime_ms": {
+        "n": 4395,
+        "p50": 4.2778,
+        "p95": 9.712960000000002,
+        "p99": 11.290246000000007,
+        "max": 510.4678,
+        "above_100ms": 2
+      },
+      "game_fps": 175.7153270010859,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 86.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 20
+    },
+    {
+      "run": "20261109-025836",
+      "stage": "dxgi_30_repeat",
+      "frametime_ms": {
+        "n": 4261,
+        "p50": 4.2338,
+        "p95": 10.2438,
+        "p99": 11.425059999999975,
+        "max": 526.1347000000001,
+        "above_100ms": 2
+      },
+      "game_fps": 170.55747726141786,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 86.4,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-181808",
+      "stage": "dxgi_30_first",
+      "frametime_ms": {
+        "n": 2996,
+        "p50": 8.41165,
+        "p95": 10.592749999999999,
+        "p99": 11.513345000000017,
+        "max": 17.4506,
+        "above_100ms": 0
+      },
+      "game_fps": 119.85551745413368,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 97.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-181808",
+      "stage": "dxgi_20",
+      "frametime_ms": {
+        "n": 3016,
+        "p50": 8.33755,
+        "p95": 10.743925,
+        "p99": 12.112115,
+        "max": 20.5772,
+        "above_100ms": 0
+      },
+      "game_fps": 120.71135731176128,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 97.4,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 20
+    },
+    {
+      "run": "20261109-181808",
+      "stage": "dxgi_30_repeat",
+      "frametime_ms": {
+        "n": 3001,
+        "p50": 8.4128,
+        "p95": 10.5057,
+        "p99": 11.5294,
+        "max": 20.6456,
+        "above_100ms": 0
+      },
+      "game_fps": 120.11150814615178,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 97.0,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-182326",
+      "stage": "dxgi_30_first",
+      "frametime_ms": {
+        "n": 2324,
+        "p50": 8.1893,
+        "p95": 14.273109999999999,
+        "p99": 39.36468399999993,
+        "max": 351.6411,
+        "above_100ms": 3
+      },
+      "game_fps": 108.26536812575408,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 98.6,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-182326",
+      "stage": "dxgi_20",
+      "frametime_ms": {
+        "n": 2945,
+        "p50": 8.4417,
+        "p95": 13.557419999999999,
+        "p99": 14.827159999999996,
+        "max": 24.2554,
+        "above_100ms": 0
+      },
+      "game_fps": 117.86043930471743,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 96.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 20
+    },
+    {
+      "run": "20261109-182326",
+      "stage": "dxgi_30_repeat",
+      "frametime_ms": {
+        "n": 2961,
+        "p50": 8.2452,
+        "p95": 13.8014,
+        "p99": 14.8726,
+        "max": 24.7307,
+        "above_100ms": 0
+      },
+      "game_fps": 118.4275082664282,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 96.5,
+      "foreground_fraction": 1.0,
+      "versions": null,
+      "capture_target_hz": 30
+    },
+    {
+      "run": "20261109-182730",
+      "stage": "live",
+      "frametime_ms": {
+        "n": 5090,
+        "p50": 9.31615,
+        "p95": 15.058385,
+        "p99": 17.343405999999984,
+        "max": 26.0701,
+        "above_100ms": 0
+      },
+      "game_fps": 113.1455425568836,
+      "matches_saved_summary": true,
+      "ram_peak_percent": 92.1,
+      "foreground_fraction": 1.0,
+      "versions": [
+        "3.26"
+      ],
+      "capture_target_hz": null
+    }
+  ],
+  "live": {
+    "20261102-013850": {
+      "version": "3.19",
+      "frames": 2482,
+      "detector_interval_ms": {
+        "n": 2481,
+        "p50": 48.258304595947266,
+        "p95": 89.32971954345703,
+        "p99": 128.94458770751768,
+        "max": 1986.8295192718506,
+        "above_100ms": 58
+      },
+      "detector_session_throughput_hz": 17.953604508312043,
+      "capture_session_rate_estimate_hz": 27.93431411385284,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 2482,
+        "p50": 22.613650000039343,
+        "p95": 52.11959000057502,
+        "p99": 67.40151700043499,
+        "max": 96.48770000057993,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 2482,
+        "p50": 7.763249999698019,
+        "p95": 17.04088999990743,
+        "p99": 20.96976000030736,
+        "max": 31.886600000689214,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 2482,
+        "p50": 53.47635000043738,
+        "p95": 84.25842999990891,
+        "p99": 103.86278999978461,
+        "max": 130.2997000002506,
+        "above_100ms": 30
+      },
+      "capture_to_input_ms": {
+        "n": 5161,
+        "p50": 83.57760000035341,
+        "p95": 122.93500000032509,
+        "p99": 143.23453999968476,
+        "max": 172.83629999928962,
+        "above_100ms": 1313
+      },
+      "input_api_ms": {
+        "n": 5236,
+        "p50": 0.2634500001477136,
+        "p95": 0.8091749994036945,
+        "p99": 1.3370400004077945,
+        "max": 10.623000000123284,
+        "above_100ms": 0
+      },
+      "input_lock_ms": {
+        "n": 5236,
+        "p50": 0.000999999429041054,
+        "p95": 0.0020000006770715117,
+        "p99": 0.0029000002541579306,
+        "max": 0.026700000489654485,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 646,
+        "inside_fire_zone": 369,
+        "target_temporarily_lost": 1246,
+        "visual_feed_diagnostic": 47,
+        "visual_kill_confirmed": 43,
+        "no_valid_head": 162
+      },
+      "visual_sequence_max": 50,
+      "clock_offset_range_ms": null,
+      "exact_queue_timing_available": false
+    },
+    "20261108-231801": {
+      "version": "3.24",
+      "frames": 1055,
+      "detector_interval_ms": {
+        "n": 1054,
+        "p50": 46.33164405822754,
+        "p95": 67.02504158020018,
+        "p99": 83.32337856292736,
+        "max": 839.1194343566895,
+        "above_100ms": 8
+      },
+      "detector_session_throughput_hz": 19.532434442678394,
+      "capture_session_rate_estimate_hz": 27.727681472995148,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 1055,
+        "p50": 20.196800000121584,
+        "p95": 36.176569999952335,
+        "p99": 49.112674000134625,
+        "max": 72.47299999971801,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 1055,
+        "p50": 6.591599999865139,
+        "p95": 15.59788999993543,
+        "p99": 17.952209999784827,
+        "max": 27.85390000008192,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 1055,
+        "p50": 50.35009999983231,
+        "p95": 69.0706500000033,
+        "p99": 82.93039999999564,
+        "max": 106.36520000025484,
+        "above_100ms": 1
+      },
+      "capture_to_input_ms": {
+        "n": 1732,
+        "p50": 82.4281999998675,
+        "p95": 114.6366299999954,
+        "p99": 124.35553099974642,
+        "max": 583.5705999998027,
+        "above_100ms": 330
+      },
+      "input_api_ms": {
+        "n": 1757,
+        "p50": 0.4863999997724022,
+        "p95": 1.02210000031846,
+        "p99": 2.35088800003723,
+        "max": 514.0377000002445,
+        "above_100ms": 1
+      },
+      "input_lock_ms": {
+        "n": 1757,
+        "p50": 0.0010999997357430402,
+        "p95": 0.0021999999262334313,
+        "p99": 0.0034440001581970193,
+        "max": 0.021800000013172394,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 208,
+        "inside_fire_zone": 45,
+        "target_temporarily_lost": 675,
+        "visual_feed_diagnostic": 37,
+        "visual_kill_confirmed": 31,
+        "no_valid_head": 119
+      },
+      "visual_sequence_max": 37,
+      "clock_offset_range_ms": null,
+      "exact_queue_timing_available": false
+    },
+    "20261108-232528": {
+      "version": "3.25",
+      "frames": 1057,
+      "detector_interval_ms": {
+        "n": 1056,
+        "p50": 45.78399658203125,
+        "p95": 78.53108644485474,
+        "p99": 492.73459911346436,
+        "max": 533.9386463165283,
+        "above_100ms": 22
+      },
+      "detector_session_throughput_hz": 18.901847527414727,
+      "capture_session_rate_estimate_hz": 26.254371547488567,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 1057,
+        "p50": 21.68389999997089,
+        "p95": 45.46720000016648,
+        "p99": 69.96795199987903,
+        "max": 99.18930000003456,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 1057,
+        "p50": 7.300100000065868,
+        "p95": 16.672000000198747,
+        "p99": 21.61216000024074,
+        "max": 30.25580000030459,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 1057,
+        "p50": 51.561299999775656,
+        "p95": 78.20222000009377,
+        "p99": 94.9555800001508,
+        "max": 140.64200000029814,
+        "above_100ms": 8
+      },
+      "capture_to_input_ms": {
+        "n": 3055,
+        "p50": 82.62400000012349,
+        "p95": 116.49993000005452,
+        "p99": 130.05122399998072,
+        "max": 150.7288000002518,
+        "above_100ms": 612
+      },
+      "input_api_ms": {
+        "n": 3057,
+        "p50": 0.47110000014072284,
+        "p95": 0.9303000002546468,
+        "p99": 1.3204880000557753,
+        "max": 11.940400000185036,
+        "above_100ms": 0
+      },
+      "input_lock_ms": {
+        "n": 3057,
+        "p50": 0.000999999883788405,
+        "p95": 0.002000000222324161,
+        "p99": 0.003099999958067201,
+        "max": 0.03550000019458821,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 397,
+        "inside_fire_zone": 394,
+        "target_temporarily_lost": 250,
+        "visual_feed_diagnostic": 2,
+        "visual_kill_confirmed": 2
+      },
+      "visual_sequence_max": 2,
+      "clock_offset_range_ms": 1.6217231750488281,
+      "exact_queue_timing_available": false
+    },
+    "20261108-232957": {
+      "version": "3.26",
+      "frames": 2740,
+      "detector_interval_ms": {
+        "n": 2739,
+        "p50": 46.81873321533203,
+        "p95": 67.02210903167725,
+        "p99": 80.63109397888175,
+        "max": 35285.32695770264,
+        "above_100ms": 16
+      },
+      "detector_session_throughput_hz": 15.197599622981166,
+      "capture_session_rate_estimate_hz": 28.011492664799736,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 2740,
+        "p50": 19.128300000147647,
+        "p95": 25.915734999875895,
+        "p99": 36.97222500008139,
+        "max": 73.5277000003407,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 2740,
+        "p50": 7.338449999906516,
+        "p95": 15.605940000068586,
+        "p99": 18.62973100012369,
+        "max": 31.682899999850633,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 2740,
+        "p50": 51.131349999877784,
+        "p95": 65.01005500003883,
+        "p99": 75.89604500010411,
+        "max": 101.45520000014585,
+        "above_100ms": 1
+      },
+      "capture_to_input_ms": {
+        "n": 12704,
+        "p50": 85.98560000018551,
+        "p95": 120.44283499988066,
+        "p99": 131.39851799979618,
+        "max": 482.1915999996236,
+        "above_100ms": 3236
+      },
+      "input_api_ms": {
+        "n": 12871,
+        "p50": 0.48100000003614696,
+        "p95": 0.9578499998497136,
+        "p99": 1.7421899999135164,
+        "max": 408.32840000030046,
+        "above_100ms": 1
+      },
+      "input_lock_ms": {
+        "n": 12871,
+        "p50": 0.0011999995876976755,
+        "p95": 0.0024000000848900527,
+        "p99": 0.003499999820633093,
+        "max": 0.07090000008247443,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 1425,
+        "inside_fire_zone": 241,
+        "target_temporarily_lost": 580,
+        "visual_feed_diagnostic": 135,
+        "visual_kill_confirmed": 126,
+        "no_valid_head": 490
+      },
+      "visual_sequence_max": 151,
+      "clock_offset_range_ms": 1.6789436340332031,
+      "exact_queue_timing_available": false
+    },
+    "20261109-182732": {
+      "version": "3.26",
+      "frames": 922,
+      "detector_interval_ms": {
+        "n": 921,
+        "p50": 58.25352668762207,
+        "p95": 80.9636116027832,
+        "p99": 94.15850639343259,
+        "max": 119.8890209197998,
+        "above_100ms": 6
+      },
+      "detector_session_throughput_hz": 17.326942894080233,
+      "capture_session_rate_estimate_hz": 29.35293873813999,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 922,
+        "p50": 26.789549999875817,
+        "p95": 43.893405000085295,
+        "p99": 52.245558000245154,
+        "max": 93.7539999999899,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 922,
+        "p50": 9.939199999962511,
+        "p95": 18.145175000154268,
+        "p99": 20.776144999986165,
+        "max": 30.591499999900407,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 922,
+        "p50": 57.04374999982065,
+        "p95": 80.65457999985027,
+        "p99": 93.96342500006539,
+        "max": 131.0150999997859,
+        "above_100ms": 5
+      },
+      "capture_to_input_ms": {
+        "n": 3421,
+        "p50": 95.4873000000589,
+        "p95": 131.721700000071,
+        "p99": 146.46478000013312,
+        "max": 176.5230999999403,
+        "above_100ms": 1461
+      },
+      "input_api_ms": {
+        "n": 3477,
+        "p50": 0.5110000001877779,
+        "p95": 1.3688000000911404,
+        "p99": 4.803231999994713,
+        "max": 16.5260999997372,
+        "above_100ms": 0
+      },
+      "input_lock_ms": {
+        "n": 3477,
+        "p50": 0.0007999997251317836,
+        "p95": 0.0018000000636675395,
+        "p99": 0.002599999788799323,
+        "max": 0.02139999969585915,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 354,
+        "target_temporarily_lost": 206,
+        "inside_fire_zone": 95,
+        "visual_feed_diagnostic": 56,
+        "visual_kill_confirmed": 52,
+        "no_valid_head": 253
+      },
+      "visual_sequence_max": 66,
+      "clock_offset_range_ms": 1.6596317291259766,
+      "exact_queue_timing_available": false
+    },
+    "20261109-182950": {
+      "version": "3.26",
+      "frames": 2060,
+      "detector_interval_ms": {
+        "n": 2059,
+        "p50": 43.98846626281738,
+        "p95": 61.828041076660156,
+        "p99": 69.60563182830815,
+        "max": 82.91983604431152,
+        "above_100ms": 0
+      },
+      "detector_session_throughput_hz": 22.35975608008447,
+      "capture_session_rate_estimate_hz": 29.399195573932488,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 2060,
+        "p50": 18.699350000133563,
+        "p95": 25.85712000011426,
+        "p99": 35.08958299993084,
+        "max": 43.094900000141934,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 2060,
+        "p50": 7.621599999765749,
+        "p95": 14.689165000072535,
+        "p99": 17.83087399989654,
+        "max": 20.600000000285945,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 2060,
+        "p50": 49.513400000023466,
+        "p95": 62.34162999996897,
+        "p99": 69.04435000008564,
+        "max": 91.5060999996058,
+        "above_100ms": 0
+      },
+      "capture_to_input_ms": {
+        "n": 7741,
+        "p50": 80.22270000037679,
+        "p95": 112.59930000005625,
+        "p99": 123.08048000004423,
+        "max": 149.59819999967294,
+        "above_100ms": 1120
+      },
+      "input_api_ms": {
+        "n": 7812,
+        "p50": 0.5532999998649757,
+        "p95": 1.4483149999250597,
+        "p99": 2.3452369998858567,
+        "max": 12.60199999978795,
+        "above_100ms": 0
+      },
+      "input_lock_ms": {
+        "n": 7812,
+        "p50": 0.0010999997357430402,
+        "p95": 0.0021999999262334313,
+        "p99": 0.0033889999849634807,
+        "max": 0.14790000022912864,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "no_valid_head": 566,
+        "predictive_zone_aim": 989,
+        "inside_fire_zone": 274,
+        "target_temporarily_lost": 231,
+        "visual_feed_diagnostic": 107,
+        "visual_kill_confirmed": 96
+      },
+      "visual_sequence_max": 115,
+      "clock_offset_range_ms": 1.9521713256835938,
+      "exact_queue_timing_available": false
+    },
+    "20261109-184844": {
+      "version": "3.28",
+      "frames": 8587,
+      "detector_interval_ms": {
+        "n": 8586,
+        "p50": 47.10555076599121,
+        "p95": 71.98482751846313,
+        "p99": 79.41616773605345,
+        "max": 2684503.4844875336,
+        "above_100ms": 10
+      },
+      "detector_session_throughput_hz": 2.6725486239532117,
+      "capture_session_rate_estimate_hz": 29.164642012774816,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 8587,
+        "p50": 19.109200000002602,
+        "p95": 25.64125999970201,
+        "p99": 30.505549999761563,
+        "max": 43.364500000279804,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 8587,
+        "p50": 6.9111000002521905,
+        "p95": 14.780560000235708,
+        "p99": 18.096105999420615,
+        "max": 26.513599999816506,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 8587,
+        "p50": 50.75910000005024,
+        "p95": 64.99682000003304,
+        "p99": 75.00009200009112,
+        "max": 90.53820000008272,
+        "above_100ms": 0
+      },
+      "capture_to_input_ms": {
+        "n": 23460,
+        "p50": 86.51545000020633,
+        "p95": 123.61815500007651,
+        "p99": 134.86656600005063,
+        "max": 164.30439999976443,
+        "above_100ms": 6681
+      },
+      "input_api_ms": {
+        "n": 78528,
+        "p50": 0.35720000005312613,
+        "p95": 0.8902649998617557,
+        "p99": 1.6982919999327335,
+        "max": 23.993499999960477,
+        "above_100ms": 0
+      },
+      "input_lock_ms": {
+        "n": 78528,
+        "p50": 0.0009000000318337698,
+        "p95": 0.002200000380980782,
+        "p99": 0.0033000001167238224,
+        "max": 2.4279000003843976,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 4398,
+        "inside_fire_zone": 488,
+        "target_temporarily_lost": 2029,
+        "visual_feed_diagnostic": 411,
+        "visual_kill_confirmed": 378,
+        "no_valid_head": 1660
+      },
+      "visual_sequence_max": 449,
+      "clock_offset_range_ms": 2.3093223571777344,
+      "exact_queue_timing_available": false
+    },
+    "20261109-201421": {
+      "version": "3.31",
+      "frames": 12260,
+      "detector_interval_ms": {
+        "n": 12259,
+        "p50": 39.92104530334473,
+        "p95": 51.89962387084961,
+        "p99": 73.3622169494629,
+        "max": 222900.68006515503,
+        "above_100ms": 117
+      },
+      "detector_session_throughput_hz": 12.329337597229355,
+      "capture_session_rate_estimate_hz": 27.14937050682976,
+      "rate_caveat": "Whole logged session including pauses; active-only rates cannot be recovered from these logs",
+      "inference_ms": {
+        "n": 12260,
+        "p50": 20.60385000095266,
+        "p95": 25.122935000399593,
+        "p99": 27.436865000563557,
+        "max": 56.152499999370775,
+        "above_100ms": 0
+      },
+      "capture_call_ms": {
+        "n": 12260,
+        "p50": 5.023450000408047,
+        "p95": 7.523994999792192,
+        "p99": 8.551726999448874,
+        "max": 14.256600001317565,
+        "above_100ms": 0
+      },
+      "capture_to_inference_end_ms": {
+        "n": 12260,
+        "p50": 45.91270000037184,
+        "p95": 58.76760000082867,
+        "p99": 62.16973899912772,
+        "max": 94.38849999969534,
+        "above_100ms": 0
+      },
+      "capture_to_input_ms": {
+        "n": 19004,
+        "p50": 76.88839999900665,
+        "p95": 106.08312000094882,
+        "p99": 114.8930110013862,
+        "max": 530.7669000012538,
+        "above_100ms": 1710
+      },
+      "input_api_ms": {
+        "n": 77773,
+        "p50": 0.25439999990339857,
+        "p95": 0.683000000208267,
+        "p99": 1.283596000794204,
+        "max": 483.6123000004591,
+        "above_100ms": 3
+      },
+      "input_lock_ms": {
+        "n": 77773,
+        "p50": 0.0010000003385357559,
+        "p95": 0.002099999619531445,
+        "p99": 0.0029000002541579306,
+        "max": 0.18149999959859997,
+        "above_100ms": 0
+      },
+      "control_reasons": {
+        "predictive_zone_aim": 4922,
+        "inside_fire_zone": 599,
+        "target_temporarily_lost": 5370,
+        "no_valid_head": 1335
+      },
+      "visual_sequence_max": 0,
+      "clock_offset_range_ms": 2.145051956176758,
+      "exact_queue_timing_available": false
+    }
+  },
+  "alignments": [
+    {
+      "trace": "20261108-231747",
+      "live": "20261108-231801",
+      "quality": "relative PresentMon clock; exact alignment unavailable"
+    },
+    {
+      "trace": "20261108-232454",
+      "live": "20261108-232528",
+      "quality": "shared QPC seconds for Present/input/capture; old control and queue timing incomplete",
+      "long_frames": [
+        {
+          "start_qpc": 3334.6234373,
+          "end_qpc": 3335.1230008,
+          "frametime_ms": 499.56350000000003,
+          "input_calls_overlapping": 19,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        },
+        {
+          "start_qpc": 3347.892084,
+          "end_qpc": 3348.3902519000003,
+          "frametime_ms": 498.16790000000003,
+          "input_calls_overlapping": 0,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 1
+        },
+        {
+          "start_qpc": 3348.6211556000003,
+          "end_qpc": 3349.135666,
+          "frametime_ms": 514.5104,
+          "input_calls_overlapping": 18,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        },
+        {
+          "start_qpc": 3349.8962115,
+          "end_qpc": 3350.3973443,
+          "frametime_ms": 501.13280000000003,
+          "input_calls_overlapping": 0,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 1
+        },
+        {
+          "start_qpc": 3350.632678,
+          "end_qpc": 3351.1488116,
+          "frametime_ms": 516.1336,
+          "input_calls_overlapping": 13,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 1
+        },
+        {
+          "start_qpc": 3372.8984968,
+          "end_qpc": 3373.4107407,
+          "frametime_ms": 512.2439,
+          "input_calls_overlapping": 0,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 1
+        },
+        {
+          "start_qpc": 3373.6267226,
+          "end_qpc": 3374.1445775,
+          "frametime_ms": 517.8549,
+          "input_calls_overlapping": 22,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 2
+        },
+        {
+          "start_qpc": 3374.9256573,
+          "end_qpc": 3375.4443954,
+          "frametime_ms": 518.7381,
+          "input_calls_overlapping": 0,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        },
+        {
+          "start_qpc": 3375.6614914,
+          "end_qpc": 3376.1870675,
+          "frametime_ms": 525.5761,
+          "input_calls_overlapping": 0,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        }
+      ],
+      "correlation_is_not_causation": true
+    },
+    {
+      "trace": "20261108-233206",
+      "live": "20261108-232957",
+      "quality": "shared QPC seconds for Present/input/capture; old control and queue timing incomplete",
+      "long_frames": [
+        {
+          "start_qpc": 3749.3746103,
+          "end_qpc": 3749.8827542,
+          "frametime_ms": 508.14390000000003,
+          "input_calls_overlapping": 4,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 1
+        },
+        {
+          "start_qpc": 3750.0897615,
+          "end_qpc": 3750.6066332,
+          "frametime_ms": 516.8717,
+          "input_calls_overlapping": 5,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        },
+        {
+          "start_qpc": 3774.3832690000004,
+          "end_qpc": 3774.9043675000003,
+          "frametime_ms": 521.0985000000001,
+          "input_calls_overlapping": 17,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        },
+        {
+          "start_qpc": 3775.09458,
+          "end_qpc": 3775.5896701,
+          "frametime_ms": 495.0901,
+          "input_calls_overlapping": 20,
+          "slow_input_calls_overlapping": 0,
+          "detector_frames_captured_inside": 0
+        }
+      ],
+      "correlation_is_not_causation": true
+    },
+    {
+      "trace": "20261109-182730",
+      "live": "20261109-182732",
+      "quality": "shared QPC seconds for Present/input/capture; old control and queue timing incomplete",
+      "long_frames": [],
+      "correlation_is_not_causation": true
+    }
+  ],
+  "missing_settings": true,
+  "note": "Historical measurements; no new game performance measurement"
+}

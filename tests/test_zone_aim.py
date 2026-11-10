@@ -19,20 +19,20 @@ def test_weak_head_uses_visible_torso_without_lowering_box_threshold():
     c.distance_fire=True
     weak=Detection(0,.95,(620,338.5,660,388.5),(-1,-1),.30)
     action=step(c,1,weak)
-    assert action['body_fallback'] and action['fire_mode']=='spray'
+    assert action['body_fallback'] and action['fire_mode']=='opening'
     assert action['zone_center']==pytest.approx((640,360))
     assert c.zone_fire_ready(1)
     c.reset()
     assert step(c,2,Detection(0,.20,weak.box,weak.head,.30))['target'] is None
 
-def test_distance_fire_uses_half_frame_for_near_and_opens_middle_with_taps(monkeypatch):
+def test_every_distance_uses_sampled_opening_and_never_automatic_spray(monkeypatch):
     c=controller()
     c.distance_fire=True
-    assert step(c,1,body(height=360))['fire_mode']=='tap'
+    assert step(c,1,body(height=360))['fire_mode']=='opening'
     c.reset()
     far=step(c,2,body(height=30))
-    assert far['fire_mode']=='spray'
-    assert far['zone_center']==pytest.approx((640,362.9))
+    assert far['fire_mode']=='opening'
+    assert far['zone_center']==pytest.approx((640,360))
     c.reset()
     draws=iter((.1,.9))
     monkeypatch.setattr('mvp_zone_aim.random',lambda:next(draws))
@@ -40,7 +40,7 @@ def test_distance_fire_uses_half_frame_for_near_and_opens_middle_with_taps(monke
     c.shot_emitted(3)
     c.tap_emitted()
     assert c.zone is None
-    assert step(c,3.04,body(height=50))['fire_mode']=='spray'
+    assert step(c,3.04,body(height=50))['fire_mode']=='tap'
     c.reset()
     assert step(c,4,body(height=50))['fire_mode']=='opening'
     c.shot_emitted(4)
@@ -50,7 +50,7 @@ def test_distance_fire_uses_half_frame_for_near_and_opens_middle_with_taps(monke
     assert c.zone_fire_ready(4.2)
     c.shot_emitted(4.2)
     c.tap_emitted()
-    assert step(c,4.24,body(height=50))['fire_mode']=='spray'
+    assert step(c,4.24,body(height=50))['fire_mode']=='tap'
 
 def test_first_aligned_source_can_fire_without_confirmation_wait():
     c=controller();a=step(c,1)

@@ -1,13 +1,26 @@
 """Windows capture and ordinary mouse input; no process memory access."""
 import ctypes as C
+import os
 from ctypes import wintypes as W
 from pathlib import Path
 import threading
 import time
 from collections import deque
 
-USER=C.WinDLL('user32',use_last_error=True)
-KERNEL=C.WinDLL('kernel32',use_last_error=True)
+class _WindowsOnly:
+    """Importable on offline hosts; no operating-system call can silently succeed."""
+    def __init__(self, name):
+        self.name = name
+
+    def __getattr__(self, name):
+        def unavailable(*args, **kwargs):
+            raise OSError(f'{self.name}.{name} requires Windows; use injected offline input')
+        setattr(self, name, unavailable)
+        return unavailable
+
+
+USER = C.WinDLL('user32', use_last_error=True) if os.name == 'nt' else _WindowsOnly('user32')
+KERNEL = C.WinDLL('kernel32', use_last_error=True) if os.name == 'nt' else _WindowsOnly('kernel32')
 try:USER.SetProcessDpiAwarenessContext(C.c_void_p(-4))
 except Exception:pass
 
@@ -61,6 +74,91 @@ class INPUT(C.Structure):
 USER.SendInput.argtypes=[W.UINT,C.POINTER(INPUT),C.c_int];USER.SendInput.restype=W.UINT
 
 def key_down(code):return bool(USER.GetAsyncKeyState(code)&0x8000)
+
+
+class PhysicalKeys:
+    """Observe physical Ctrl edges, excluding our own SendInput events.
+
+    This is an ordinary Windows low-level keyboard hook in this process, not
+    a hook/injection into the game. Its message loop never performs control.
+    """
+    def __init__(self):
+        if os.name != 'nt':
+            raise OSError('Physical keyboard observation requires Windows')
+        self.keys = {key for key in (0xA2, 0xA3) if key_down(key)}
+        self.ctrl_generation = 0
+        self.ready = threading.Event()
+        self.stopping = threading.Event()
+        self.error = None
+        self.thread_id = None
+        self.thread = threading.Thread(target=self._run, daemon=True)
+        self.thread.start()
+        if not self.ready.wait(2) or self.error:
+            self.close()
+            raise OSError(self.error or 'Physical keyboard observer did not start')
+
+    def ctrl_down(self):
+        return bool(self.keys)
+
+    def left_ctrl_down(self):
+        return 0xA2 in self.keys
+
+    def _run(self):
+        hook = None
+        try:
+            class KeyboardEvent(C.Structure):
+                _fields_ = [('vkCode', W.DWORD), ('scanCode', W.DWORD),
+                            ('flags', W.DWORD), ('time', W.DWORD),
+                            ('extra', C.c_size_t)]
+            callback_type = C.WINFUNCTYPE(C.c_ssize_t, C.c_int, W.WPARAM, W.LPARAM)
+            USER.SetWindowsHookExW.argtypes = [C.c_int, callback_type, W.HINSTANCE, W.DWORD]
+            USER.SetWindowsHookExW.restype = W.HANDLE
+            USER.CallNextHookEx.argtypes = [W.HANDLE, C.c_int, W.WPARAM, W.LPARAM]
+            USER.CallNextHookEx.restype = C.c_ssize_t
+            USER.UnhookWindowsHookEx.argtypes = [W.HANDLE]
+            USER.GetMessageW.argtypes = [C.POINTER(W.MSG), W.HWND, W.UINT, W.UINT]
+            USER.PeekMessageW.argtypes = [C.POINTER(W.MSG), W.HWND, W.UINT, W.UINT, W.UINT]
+            USER.PostThreadMessageW.argtypes = [W.DWORD, W.UINT, W.WPARAM, W.LPARAM]
+            KERNEL.GetCurrentThreadId.restype = W.DWORD
+            KERNEL.GetModuleHandleW.argtypes = [W.LPCWSTR]
+            KERNEL.GetModuleHandleW.restype = W.HMODULE
+            self.thread_id = KERNEL.GetCurrentThreadId()
+
+            @callback_type
+            def callback(code, message, data):
+                if code >= 0:
+                    event = C.cast(data, C.POINTER(KeyboardEvent)).contents
+                    if not event.flags & 0x10 and event.vkCode in (0x11, 0xA2, 0xA3):
+                        key = 0xA3 if event.flags & 1 else 0xA2
+                        if message in (0x100, 0x104) and key not in self.keys:
+                            self.keys.add(key)
+                            self.ctrl_generation += 1
+                        elif message in (0x101, 0x105) and key in self.keys:
+                            self.keys.discard(key)
+                            self.ctrl_generation += 1
+                return USER.CallNextHookEx(hook, code, message, data)
+
+            hook = USER.SetWindowsHookExW(13, callback, KERNEL.GetModuleHandleW(None), 0)
+            if not hook:
+                raise C.WinError(C.get_last_error())
+            message = W.MSG()
+            # Create the thread message queue before close() can post WM_QUIT.
+            USER.PeekMessageW(C.byref(message), None, 0, 0, 0)
+            self.ready.set()
+            while not self.stopping.is_set() and USER.GetMessageW(C.byref(message), None, 0, 0) > 0:
+                pass
+        except Exception as error:
+            self.error = str(error)
+        finally:
+            if hook:
+                USER.UnhookWindowsHookEx(hook)
+            self.ready.set()
+
+    def close(self):
+        self.stopping.set()
+        if self.thread_id is not None:
+            USER.PostThreadMessageW(self.thread_id, 0x12, 0, 0)
+        self.thread.join(timeout=2)
 
 
 def set_key(code, down):
@@ -220,7 +318,11 @@ class Capture:
         finally:
             if camera is not None:camera.release()
             if sct is not None:sct.close()
-    def close(self):self.stop.set();self.thread.join(timeout=2)
+    def close(self):
+        self.stop.set()
+        self.thread.join(timeout=2)
+        if self.thread.is_alive():
+            raise TimeoutError('Capture is still stopping; refusing concurrent recreation')
 
 
 def release_movement_keys(codes):

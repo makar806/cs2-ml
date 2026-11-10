@@ -314,3 +314,11 @@ The near band starts at 50% of frame height. The experimental far cutoff remains
 
 ### MVP v3.31 — weak-head fallback and repeated automatic bursts
 The local AK mode retains the regular body confidence cutoff. A weak or unusable head keypoint switches the held target to torso spray for the remainder of that lock. A geometric anchor supports association and is not a firing point. Finishing a full spray profile no longer blocks the same target permanently. It can restart after a 2.5-second reload allowance, with fresh torso alignment and the same safety checks. The panel does not observe ammo or send a reload command. 230 automated tests passed; reload and repeated bursts still require a local CS2 check.
+
+### MVP v3.32 — ручной спрей и офлайн-проверка передачи, 10 ноября
+
+Ветка `fix/offline-control-v3.32`, [подробный отчёт](docs/v3.32.md). Спрей только по Mouse 4; автоматический старт серии случайно выбирает 1/2 одиночных, интервал пары от фактической отправки ≥0,20 с, продолжение одиночными ≥0,25 с. Добавлены следование свежему корпусу по двум осям, непрерывная смена стойки, владение физическим Ctrl, сброс старого движения после очереди, повтор только при наблюдённой перезарядке. Далёкая соседняя рамка больше не выбирается по таймеру пропуска прежней цели.
+
+HUD читается из того же кадра. Подтверждённый профиль только AK; неизвестное оружие/боезапас/перезарядка/зум блокируют огонь. Переданные четыре обучающих AK-кадра позволяют проверить силуэт (4/4 после калибровки цвета), но не дают полного комплекта `work/hud`. Без него основной батник не стреляет. Коэффициент crouch 0,75 — гипотеза с откатом в 1. Асинхронные журналы отключаются `--sync-logs`; добавлены границы этапов на общей шкале. Фризы не объявлены исправленными.
+
+266 тестов прошли, 3 Windows/Tk-проверки пропущены на macOS. На 16 синтетических head-сценариях метрики до/после совпали; стоячий recoil совпал на 3050 шагах. На 117 прежних holdout-кадрах, один CPU/PyTorch: V9 48/65 и 11 FP, V10 42/65 и 17 FP. V9 оставлена. Пересчитаны 45 исторических этапов PresentMon, расхождений со сводками нет. Исходные изображения/шаблоны не публиковались; нативный Windows, перезарядка/другие оружия/зумы и попадания/фризы на целевом ноутбуке требуют дальнейших наблюдений.

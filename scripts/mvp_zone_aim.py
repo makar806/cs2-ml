@@ -2,7 +2,7 @@
 import math
 from random import random
 from mvp_core import Detection, box_iou
-from mvp_recorded_aim import RecordedController
+from mvp_recorded_aim import RecordedController, make_head_filter
 from mvp_geometry import rotate_geometry
 
 SHOT_INTERVAL = .25
@@ -19,6 +19,8 @@ class ZoneController(RecordedController):
         self.distance_band=None
         self.opening_taps=0
         self.body_fallback=False
+        self.body_filter = make_head_filter(self.settings.head_filter)
+        self.weapon_aim_point = getattr(self,'weapon_aim_point',None)
 
     def tracking_detection(self, detection, *, for_rebase=False):
         if not getattr(self, 'distance_fire', False):
@@ -56,13 +58,9 @@ class ZoneController(RecordedController):
             candidate = nearby[0]
             mode = 'reassociate'
         else:
-            eligible = [(distance, d) for distance, d in choices
-                        if d.cls == self.settings.enemy
-                        and (self.settings.radius <= 0 or distance <= self.settings.radius * width/1280)]
-            if not eligible:
-                return None, None
-            candidate = min(eligible, key=lambda item: item[0])[1]
-            mode = 'reacquire'
+            # A distant visible enemy does not prove the old one left the view.
+            # CameraLock or a confirmed kill must release that identity first.
+            return None, None
 
         count = 1
         if previous:
@@ -70,12 +68,18 @@ class ZoneController(RecordedController):
             if old_mode == mode and 0 < captured_at-source <= .15 and box_iou(old.box, candidate.box) >= .30:
                 count = streak + 1
         self.recovery_sample = (candidate, captured_at, count, mode)
-        if count >= 3 and (mode == 'reassociate' or captured_at-self.locked_at >= .35):
+        if count >= 3:
             return candidate, mode
         return None, None
 
     def set_head_filter(self, mode):
         super().set_head_filter(mode)
+        self.zone=None
+        self.body_filter = make_head_filter(mode)
+
+    def restart_series(self):
+        self.distance_target=None
+        self.opening_taps=0
         self.zone=None
 
     def zone_geometry(self, now):
@@ -102,12 +106,14 @@ class ZoneController(RecordedController):
     def tap_emitted(self):
         if self.zone and self.zone['fire_mode']=='opening':
             self.opening_taps -= 1
-            # Require a new observation aimed at the torso before starting spray.
+            # End the sampled opening; further shots remain single taps and
+            # require another fresh observation. There is no automatic spray.
             if self.opening_taps == 0:
                 self.zone = None
 
     def acknowledge(self, dx, dy, width, height):
         super().acknowledge(dx,dy,width,height)
+        self.body_filter.acknowledge(dx,dy,(width,height),self.settings)
         if self.zone:
             point=self.zone['center'];x,y=point
             moved=rotate_geometry((x-1,y-1,x+1,y+1),point,dx,dy,(width,height),self.settings.sensitivity,self.settings.fov_4_3)
@@ -123,15 +129,11 @@ class ZoneController(RecordedController):
         if action['reason'] == 'target_temporarily_lost':
             candidate, recovery_mode = self.recover_target(detections, width, height, now, captured_at)
             if candidate is not None:
-                if recovery_mode == 'reacquire':
-                    retired = self.retired
-                    self.reset()
-                    self.retired = retired
-                else:
-                    self.projected_locked = candidate
-                    self.head_filter.clear()
-                    self.course = None
-                    self.accepted_at = None
+                self.projected_locked = candidate
+                self.head_filter.clear()
+                self.body_filter.clear()
+                self.course = None
+                self.accepted_at = None
                 action = super().step([candidate], width, height, now, captured_at,
                                       enabled=enabled, foreground=foreground, fire=False)
                 fire = False
@@ -149,18 +151,15 @@ class ZoneController(RecordedController):
                 self.distance_target = self.acquired_at
                 height_ratio = bh / height
                 self.distance_band = 'far' if height_ratio <= .05 else 'near' if height_ratio >= .50 else 'middle'
-                self.opening_taps = (1 if random() < .5 else 2) if self.distance_band == 'middle' else 0
+                self.opening_taps = 1 if random() < .5 else 2
+                self.body_filter.clear()
                 self.body_fallback = False
             self.body_fallback |= target.box in weak_heads
-            if self.body_fallback:
-                fire_mode = 'spray'
-            elif self.distance_band == 'middle':
-                fire_mode = 'opening' if self.opening_taps else 'spray'
-                interval = OPENING_INTERVAL
-            else:
-                fire_mode = 'tap' if self.distance_band == 'near' else 'spray'
+            fire_mode = 'opening' if self.opening_taps else 'tap'
+            interval = OPENING_INTERVAL if self.opening_taps else SHOT_INTERVAL
         radius=max(.5*scale,min(bw*.14,bh*.055))
-        body = fire_mode == 'spray' or (fire_mode is None and self.settings.aim_point=='body')
+        body = (self.weapon_aim_point == 'body' or self.body_fallback
+                or (fire_mode is None and self.settings.aim_point=='body'))
         if body:radius=max(.5*scale,min(bw*.22,bh*.12))
         age=max(0,now-captured_at)
         velocity=tuple(max(-1800*scale,min(1800*scale,v)) for v in action['filtered_velocity'])
@@ -173,9 +172,15 @@ class ZoneController(RecordedController):
         # Reject one-frame positional lag as a reason to fire outside the circle:
         # firing center is the observed keypoint projected only by source age.
         observed=self.previous
-        if fire_mode == 'spray':
+        if body:
             body_center = (target.box[0]+bw*.5, target.box[1]+bh*.43)
-            point = tuple(p + b - o for p,b,o in zip(point,body_center,observed))
+            point, velocity = self.body_filter.observe(body_center, captured_at, radius)
+            velocity = tuple(max(-1800*scale,min(1800*scale,v)) for v in velocity)
+            samples = self.body_filter.samples
+            if len(samples) == 3:
+                first, middle, last = (s[1] for s in samples)
+                velocity = tuple(v if (b-a)*(c-b)>0 and v*(c-b)>0 else 0.
+                                 for a,b,c,v in zip(first,middle,last,velocity))
             observed = body_center
         center=tuple(observed[i]+velocity[i]*age for i in (0,1))
         if self.accepted_at is not None and 0<now-self.accepted_at<.2:
@@ -209,7 +214,7 @@ class ZoneController(RecordedController):
         self.zone=dict(center=center,radius=radius,size=(width,height),source=captured_at,accepted=now,velocity=velocity,fire=fire,fire_mode=fire_mode,interval=interval)
         return dict(action,dx=dx,dy=dy,shoot=False,reason='inside_fire_zone' if inside else 'predictive_zone_aim',
                     recovered_lone_target=recovery_mode == 'reassociate', recovery_mode=recovery_mode,
-                    fire_policy='zone',fire_mode=fire_mode,body_fallback=self.body_fallback,
+                    fire_policy='zone',fire_mode=fire_mode,body_fallback=self.body_fallback,aim_point='body' if body else 'head',
                     zone_center=center,zone_radius_px=radius,zone_inside=inside,
                     prediction_time_ms=(age+horizon)*1000,prediction_point=future,
                     movement_duration=horizon if dx or dy else 0,motion_max_age=motion_age,

@@ -1,0 +1,42 @@
+{
+  "frames": [
+    {
+      "sha256": "b8dcfebb7d04e995825e9fcb318f5f9c5c905830edf427336e441e7fa452db25",
+      "recognized": "weapon_ak47",
+      "median_ms": 1.4149374910630286,
+      "own_killfeed_rows": 2,
+      "sample": 1
+    },
+    {
+      "sha256": "7b1f51ee5d33c67cd8d62bd67c7e2c313cd0eaf7fe7c1b3f25c2366bcbee801f",
+      "recognized": "weapon_ak47",
+      "median_ms": 1.383749971864745,
+      "own_killfeed_rows": 0,
+      "sample": 2
+    },
+    {
+      "sha256": "5370d913ca23d864ebcc1eaaa231299d250b3f958f68015e6cfff847f052c713",
+      "recognized": "weapon_ak47",
+      "median_ms": 1.3996039924677461,
+      "own_killfeed_rows": 0,
+      "sample": 3
+    },
+    {
+      "sha256": "c3f0b761e9475ad798c1b9d20d8c2b777ff84ae70715dd2b501fb270769ac6b5",
+      "recognized": "weapon_ak47",
+      "median_ms": 1.380249479552731,
+      "own_killfeed_rows": 0,
+      "sample": 4
+    }
+  ],
+  "independent_validation": false,
+  "unavailable": [
+    "other active weapons",
+    "weapon transitions",
+    "reload",
+    "ammo changes",
+    "sniper zoom"
+  ],
+  "note": "Templates derive from training screenshots; no detector retraining or holdout changes",
+  "calibration_sample": 1
+}

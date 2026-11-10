@@ -63,19 +63,16 @@ def test_capture_is_released_on_leaving_game_foreground(monkeypatch, tmp_path):
     assert not (tmp_path / 'error.txt').exists()
 
 
-def test_reacquires_visible_candidate_after_persistent_loss_of_old_lock():
+def test_persistent_loss_and_distant_candidates_do_not_release_old_lock():
     controller = ZoneController(Settings(fire_policy='zone'))
     old = Detection(0, .9, (899, 528, 932, 602), (916, 536), .99)
     visible = Detection(0, .9, (625, 531, 656, 604), (640, 539), .99)
     other = Detection(0, .9, (385, 531, 418, 605), (400, 539), .99)
     step(controller, 10, [old])
-    for at in (10.25, 10.29, 10.33):
+    for at in (10.25, 10.29, 10.33, 10.37, 11., 20.):
         assert step(controller, at, [visible, other])['target'] is None
-    recovered = step(controller, 10.37, [visible, other])
-    assert recovered['recovery_mode'] == 'reacquire'
-    assert controller.acquired_at == 10.37
-    assert recovered['target'].head == visible.head
-    assert not recovered['shot_ready']
+    assert controller.acquired_at == 10
+    assert controller.locked == old
 
 
 def test_nearby_bot_of_different_size_does_not_block_reassociation():
