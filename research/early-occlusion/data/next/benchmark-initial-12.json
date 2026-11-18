@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "annotation_method": "manual model-blind pixel review by assistant, single annotator; no gameplay/event metadata",
+  "fps": 32,
+  "image_size": [
+    1280,
+    720
+  ],
+  "analysis_roi": [
+    160,
+    0,
+    1120,
+    720
+  ],
+  "iou": 0.3,
+  "confirmation": "two consecutive associated boxes, each IoU >= .30 with visible GT on that frame",
+  "full_exit": "entire body clears solid cover; censored episodes explicitly separated",
+  "appearances": [
+    {
+      "case": 803,
+      "first": 221,
+      "last_partial": 228,
+      "full_frame": null,
+      "censored": true,
+      "box": [
+        748,
+        273,
+        760,
+        299
+      ],
+      "boxes": {
+        "221": [
+          [
+            748,
+            273,
+            760,
+            299
+          ]
+        ],
+        "222": [
+          [
+            730,
+            267,
+            773,
+            310
+          ]
+        ],
+        "223": [
+          [
+            715,
+            270,
+            774,
+            319
+          ]
+        ],
+        "224": [
+          [
+            704,
+            272,
+            766,
+            329
+          ]
+        ],
+        "225": [
+          [
+            686,
+            278,
+            749,
+            338
+          ]
+        ],
+        "226": [
+          [
+            664,
+            287,
+            729,
+            347
+          ]
+        ],
+        "227": [
+          [
+            642,
+            294,
+            708,
+            359
+          ]
+        ],
+        "228": [
+          [
+            620,
+            307,
+            687,
+            373
+          ]
+        ]
+      },
+      "roi": [
+        595,
+        242,
+        799,
+        398
+      ],
+      "note": "Scoped camera clears the near yellow corner, revealing the head/sleeve behind a second low wall. Lower body stays occluded; censored at f228 before unscoping, no full-body exit observed."
+    },
+    {
+      "case": 804,
+      "first": 639,
+      "last_partial": 640,
+      "full_frame": 641,
+      "censored": false,
+      "box": [
+        655,
+        368,
+        670,
+        392
+      ],
+      "boxes": {
+        "639": [
+          [
+            655,
+            368,
+            670,
+            392
+          ]
+        ],
+        "640": [
+          [
+            644,
+            350,
+            687,
+            444
+          ]
+        ]
+      },
+      "roi": [
+        619,
+        325,
+        712,
+        469
+      ],
+      "note": "Sleeve/forearm at the near stone corner under residual flash. Firearm excluded. Trailing foot still touches cover at f640; whole body clear at f641."
+    },
+    {
+      "case": 805,
+      "first": 208,
+      "last_partial": 209,
+      "full_frame": 210,
+      "censored": false,
+      "box": [
+        971,
+        241,
+        986,
+        286
+      ],
+      "boxes": {
+        "208": [
+          [
+            971,
+            241,
+            986,
+            286
+          ]
+        ],
+        "209": [
+          [
+            979,
+            229,
+            1013,
+            295
+          ]
+        ]
+      },
+      "roi": [
+        946,
+        204,
+        1038,
+        320
+      ],
+      "note": "Side and legs of jumping T behind the stone corner. Firearm excluded. Rear boot clears the foreground ledge at f210."
+    },
+    {
+      "case": 806,
+      "first": 2386,
+      "last_partial": 2388,
+      "full_frame": 2389,
+      "censored": false,
+      "box": [
+        642,
+        344,
+        655,
+        396
+      ],
+      "boxes": {
+        "2386": [
+          [
+            642,
+            344,
+            655,
+            396
+          ]
+        ],
+        "2387": [
+          [
+            631,
+            341,
+            651,
+            397
+          ]
+        ],
+        "2388": [
+          [
+            630,
+            341,
+            650,
+            398
+          ]
+        ]
+      },
+      "roi": [
+        605,
+        316,
+        680,
+        423
+      ],
+      "note": "Right profile of CT at left stone corner; narrow visible body. Forearm remains hidden through f2388; whole body clears at f2389."
+    },
+    {
+      "case": 808,
+      "first": 404,
+      "last_partial": 407,
+      "full_frame": 408,
+      "censored": false,
+      "box": [
+        1064,
+        304,
+        1079,
+        351
+      ],
+      "boxes": {
+        "404": [
+          [
+            1064,
+            304,
+            1079,
+            351
+          ]
+        ],
+        "405": [
+          [
+            1059,
+            292,
+            1086,
+            349
+          ]
+        ],
+        "406": [
+          [
+            1048,
+            293,
+            1084,
+            359
+          ]
+        ],
+        "407": [
+          [
+            1038,
+            294,
+            1081,
+            356
+          ]
+        ]
+      },
+      "roi": [
+        1013,
+        267,
+        1111,
+        384
+      ],
+      "note": "Glove and a small boot patch first at f404; f403 contains firearm only. Bounding box encloses both visible fragments. Trailing boot clears corner at f408."
+    }
+  ],
+  "empty_windows": [
+    {
+      "case": 801,
+      "start": 692,
+      "stop": 711,
+      "note": "Only near stone alcove, no distant fountain view."
+    },
+    {
+      "case": 802,
+      "start": 224,
+      "stop": 255
+    },
+    {
+      "case": 803,
+      "start": 176,
+      "stop": 207
+    },
+    {
+      "case": 804,
+      "start": 352,
+      "stop": 383
+    },
+    {
+      "case": 805,
+      "start": 176,
+      "stop": 207
+    },
+    {
+      "case": 806,
+      "start": 416,
+      "stop": 447,
+      "note": "Replaces rejected proposed 160-191 window: camera revealed teammates there."
+    },
+    {
+      "case": 807,
+      "start": 1120,
+      "stop": 1132,
+      "note": "Trimmed before the camera reveals another player at f1134; all frames reviewed before inference."
+    },
+    {
+      "case": 808,
+      "start": 352,
+      "stop": 383
+    },
+    {
+      "case": 809,
+      "start": 1100,
+      "stop": 1131
+    },
+    {
+      "case": 810,
+      "start": 416,
+      "stop": 447
+    },
+    {
+      "case": 811,
+      "start": 416,
+      "stop": 447
+    },
+    {
+      "case": 812,
+      "start": 1040,
+      "stop": 1071
+    }
+  ],
+  "screening": {
+    "eligible_sources": [
+      803,
+      804,
+      805,
+      806,
+      808
+    ],
+    "not_scored_as_partial": {
+      "801": "Inspected reappearance f714 is already clear of the near corner.",
+      "802": "No suitable partial-to-full episode identified in reviewed round.",
+      "807": "Inspected f1380 reveal is limited by the camera/image boundary and own weapon.",
+      "809": "No suitable isolated partial onset in reviewed segments; use empty scene only.",
+      "810": "Inspected reveal coincides with unscoping, not a solid-cover partial interval.",
+      "811": "No suitable partial-to-full episode identified in reviewed round.",
+      "812": "First body at f1089 is already fully visible; zero partial-frame opportunity."
+    }
+  },
+  "limitations": [
+    "Small manually selected pilot, five eligible episodes in five new matches; negative windows from all twelve matches.",
+    "Historical V18 training source list unavailable: only disjointness from all 45 published sources and current training is verified.",
+    "Single-annotator pixel boundaries/first-visible frame can be uncertain by approximately one frame or 1-2 pixels; sensitivity must be reported."
+  ],
+  "frozen_before_predictions_utc": "2026-11-18T11:07:16.310569+00:00",
+  "empty_frame_count": 353
+}

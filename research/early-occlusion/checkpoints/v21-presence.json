@@ -1,0 +1,105 @@
+{
+  "method": "frozen-visible-box-presence",
+  "seed": 42,
+  "source_sha256": "8fded5609c51faa1b758c4b06f52d8a7e6a33f10e5677c072a40bc89a20ca677",
+  "features_sha256": "bd1ba8b651ae02ca314435703fd09e617391abcb3a1c6070d70f18302d38f19d",
+  "steps": 400,
+  "regularization": 0.1,
+  "target": "tal",
+  "learned_parameters": 260,
+  "training_match_ids": [
+    2392038,
+    2392199,
+    2392281,
+    2392362,
+    2392387,
+    2392482,
+    2392550,
+    2392570,
+    2392616,
+    2392660,
+    2392864,
+    2392933,
+    2393015,
+    2393029,
+    2393066,
+    2393235,
+    2393247,
+    2393258
+  ],
+  "positive_iou": null,
+  "changed_tensors": [
+    "model.26.cv3.0.2.weight",
+    "model.26.cv3.0.2.bias",
+    "model.26.cv3.1.2.weight",
+    "model.26.cv3.1.2.bias",
+    "model.26.cv3.2.2.weight",
+    "model.26.cv3.2.2.bias",
+    "model.26.cv3.3.2.weight",
+    "model.26.cv3.3.2.bias"
+  ],
+  "checkpoint_sha256": "27ae877c8e358713a862ab221d96bc2135d8318a50cd5617815b9a8b08448feb",
+  "frames": 83,
+  "anchors": 83351,
+  "positive_anchors": 490,
+  "training_log": [
+    {
+      "step": 1,
+      "bce": 0.43412381410598755,
+      "logit_drift": 0.0,
+      "objective": 0.43412381410598755
+    },
+    {
+      "step": 51,
+      "bce": 0.3994240164756775,
+      "logit_drift": 0.13306093215942383,
+      "objective": 0.4127300977706909
+    },
+    {
+      "step": 101,
+      "bce": 0.39417213201522827,
+      "logit_drift": 0.15274497866630554,
+      "objective": 0.4094466269016266
+    },
+    {
+      "step": 151,
+      "bce": 0.3908337354660034,
+      "logit_drift": 0.17001205682754517,
+      "objective": 0.4078349471092224
+    },
+    {
+      "step": 201,
+      "bce": 0.38869133591651917,
+      "logit_drift": 0.181400328874588,
+      "objective": 0.40683138370513916
+    },
+    {
+      "step": 251,
+      "bce": 0.3871777653694153,
+      "logit_drift": 0.18966296315193176,
+      "objective": 0.40614405274391174
+    },
+    {
+      "step": 301,
+      "bce": 0.38603976368904114,
+      "logit_drift": 0.19612710177898407,
+      "objective": 0.4056524634361267
+    },
+    {
+      "step": 351,
+      "bce": 0.38515371084213257,
+      "logit_drift": 0.2013656347990036,
+      "objective": 0.40529027581214905
+    },
+    {
+      "step": 400,
+      "bce": 0.3844600319862366,
+      "logit_drift": 0.20560123026371002,
+      "objective": 0.405020147562027
+    }
+  ],
+  "target_mass": 186.9532012939453,
+  "metadata_note": "Sidecar anchor count corrected to nonzero targets; checkpoint tensors and bytes unchanged. Inherited train_args/train_metrics describe source V18, not this adaptation. Inside the frozen checkpoint, positive_iou and ignored_iou are legacy fields of the visible-target experiment; for V21 the target=tal recipe and this sidecar apply.",
+  "positive_assignment": "TAL foreground with nonzero target",
+  "negative_iou_below": 0.1
+}

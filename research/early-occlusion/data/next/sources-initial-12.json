@@ -1,0 +1,110 @@
+[
+  {
+    "case": 801,
+    "match_id": 2393337,
+    "map": "de_inferno",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393337/map_name=de_inferno/round=07/player=02/video.mp4",
+    "bytes": 38208650,
+    "sha256": "87c79adf5755841fc9a8084fd3ae0da42dc0e641b1bcaf2d33dbf7d628d33404",
+    "file": "801.mp4"
+  },
+  {
+    "case": 802,
+    "match_id": 2392868,
+    "map": "de_anubis",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392868/map_name=de_anubis/round=07/player=02/video.mp4",
+    "bytes": 18900832,
+    "sha256": "c95576a206dba09614eefa69f447eec69853f72ab712f732cceeb8414eaf2424",
+    "file": "802.mp4"
+  },
+  {
+    "case": 803,
+    "match_id": 2393237,
+    "map": "de_dust2",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393237/map_name=de_dust2/round=07/player=02/video.mp4",
+    "bytes": 65175898,
+    "sha256": "579e5a2dc7dbe7b1a877c4d39ba62607377da85dd5a3a420587a466e9eed231e",
+    "file": "803.mp4"
+  },
+  {
+    "case": 804,
+    "match_id": 2392794,
+    "map": "de_ancient",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392794/map_name=de_ancient/round=07/player=02/video.mp4",
+    "bytes": 23816503,
+    "sha256": "507776954610809b21660234203eca96fae51856ca5ceeeebc364ca2a18b9511",
+    "file": "804.mp4"
+  },
+  {
+    "case": 805,
+    "match_id": 2392266,
+    "map": "de_ancient",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392266/map_name=de_ancient/round=07/player=02/video.mp4",
+    "bytes": 64814592,
+    "sha256": "ac7523e10b795238759bab3c504b549c513ef95814d6921587b966006f62065b",
+    "file": "805.mp4"
+  },
+  {
+    "case": 806,
+    "match_id": 2392539,
+    "map": "de_ancient",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392539/map_name=de_ancient/round=07/player=02/video.mp4",
+    "bytes": 85276655,
+    "sha256": "455a21ab6b9a1b5a2556bb160a7f07af2ab2c042f4a0aa85b167e49813b329eb",
+    "file": "806.mp4"
+  },
+  {
+    "case": 807,
+    "match_id": 2392154,
+    "map": "de_nuke",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392154/map_name=de_nuke/round=07/player=02/video.mp4",
+    "bytes": 107141161,
+    "sha256": "281acbcdc25af2dceb14fa63ac90fa4454edcb6b17faa4ea3106f510df9c65da",
+    "file": "807.mp4"
+  },
+  {
+    "case": 808,
+    "match_id": 2393110,
+    "map": "de_ancient",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393110/map_name=de_ancient/round=07/player=02/video.mp4",
+    "bytes": 17689885,
+    "sha256": "ce76eb9fccf0b849f37ffc9177d9b94cbabf53dfd59edabdbdc3846e63cb556a",
+    "file": "808.mp4"
+  },
+  {
+    "case": 809,
+    "match_id": 2393085,
+    "map": "de_inferno",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393085/map_name=de_inferno/round=07/player=02/video.mp4",
+    "bytes": 88966918,
+    "sha256": "71fac131c464e36a1860c375748afb85ceba633b6aad0637d3e7ec3525f46793",
+    "file": "809.mp4"
+  },
+  {
+    "case": 810,
+    "match_id": 2392936,
+    "map": "de_anubis",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392936/map_name=de_anubis/round=07/player=02/video.mp4",
+    "bytes": 52758820,
+    "sha256": "aca97ba907fa98c8c61a7844daa09237cbe9198d8dfdd2469217dfd46f8a3ed7",
+    "file": "810.mp4"
+  },
+  {
+    "case": 811,
+    "match_id": 2392389,
+    "map": "de_ancient",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392389/map_name=de_ancient/round=07/player=02/video.mp4",
+    "bytes": 21887940,
+    "sha256": "a8cc1be250a146e7455356088d206f6f2571190d24010bdc2a0ecd505a610ae9",
+    "file": "811.mp4"
+  },
+  {
+    "case": 812,
+    "match_id": 2392590,
+    "map": "de_anubis",
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392590/map_name=de_anubis/round=07/player=02/video.mp4",
+    "bytes": 46607510,
+    "sha256": "c9d7bf7dfad7fb781e98e2e766158e91ab3961a4998dd51f9368495ed715e41d",
+    "file": "812.mp4"
+  }
+]

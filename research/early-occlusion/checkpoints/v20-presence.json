@@ -1,0 +1,107 @@
+{
+  "method": "frozen-visible-box-presence",
+  "seed": 42,
+  "source_sha256": "8fded5609c51faa1b758c4b06f52d8a7e6a33f10e5677c072a40bc89a20ca677",
+  "features_sha256": "bd1ba8b651ae02ca314435703fd09e617391abcb3a1c6070d70f18302d38f19d",
+  "steps": 400,
+  "regularization": 0.01,
+  "learned_parameters": 260,
+  "training_match_ids": [
+    2392038,
+    2392199,
+    2392281,
+    2392362,
+    2392387,
+    2392482,
+    2392550,
+    2392570,
+    2392616,
+    2392660,
+    2392864,
+    2392933,
+    2393015,
+    2393029,
+    2393066,
+    2393235,
+    2393247,
+    2393258
+  ],
+  "positive_iou": 0.3,
+  "ignored_iou": [
+    0.1,
+    0.3
+  ],
+  "changed_tensors": [
+    "model.26.cv3.0.2.weight",
+    "model.26.cv3.0.2.bias",
+    "model.26.cv3.1.2.weight",
+    "model.26.cv3.1.2.bias",
+    "model.26.cv3.2.2.weight",
+    "model.26.cv3.2.2.bias",
+    "model.26.cv3.3.2.weight",
+    "model.26.cv3.3.2.bias"
+  ],
+  "checkpoint_sha256": "b5421e06b7148b7882e988e1087d0b898484768812d99d43ba4770aa2359c074",
+  "frames": 83,
+  "anchors": 85963,
+  "positive_anchors": 3102,
+  "training_log": [
+    {
+      "step": 1,
+      "bce": 3.9886770248413086,
+      "logit_drift": 0.0,
+      "objective": 3.9886770248413086
+    },
+    {
+      "step": 51,
+      "bce": 1.8334194421768188,
+      "logit_drift": 35.46073913574219,
+      "objective": 2.1880269050598145
+    },
+    {
+      "step": 101,
+      "bce": 0.8502197265625,
+      "logit_drift": 73.12818908691406,
+      "objective": 1.5815016031265259
+    },
+    {
+      "step": 151,
+      "bce": 0.6476709842681885,
+      "logit_drift": 77.77653503417969,
+      "objective": 1.42543625831604
+    },
+    {
+      "step": 201,
+      "bce": 0.5877978801727295,
+      "logit_drift": 78.19342041015625,
+      "objective": 1.369732141494751
+    },
+    {
+      "step": 251,
+      "bce": 0.5618094205856323,
+      "logit_drift": 77.96818542480469,
+      "objective": 1.3414912223815918
+    },
+    {
+      "step": 301,
+      "bce": 0.5464587211608887,
+      "logit_drift": 77.51327514648438,
+      "objective": 1.3215913772583008
+    },
+    {
+      "step": 351,
+      "bce": 0.5350486040115356,
+      "logit_drift": 77.14404296875,
+      "objective": 1.3064889907836914
+    },
+    {
+      "step": 400,
+      "bce": 0.5261388421058655,
+      "logit_drift": 76.85719299316406,
+      "objective": 1.2947107553482056
+    }
+  ],
+  "target": "visible",
+  "target_mass": 3102.0,
+  "metadata_note": "Sidecar anchor count corrected to nonzero targets; checkpoint tensors and bytes unchanged. Inherited train_args/train_metrics describe source V18, not this adaptation."
+}

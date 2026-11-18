@@ -1,0 +1,22 @@
+{
+  "unit_tests": {
+    "command": ".venv/bin/python research/early-occlusion/src/test-presence.py",
+    "result": "passed",
+    "count": 4
+  },
+  "shell_syntax": {
+    "command": "bash -n research/early-occlusion/src/run-next.sh",
+    "result": "passed"
+  },
+  "all_research_python_ast": "passed",
+  "new_json_parse": "passed",
+  "report_relative_links": "passed",
+  "frozen_candidate_and_annotations_sha256": "passed",
+  "new_media_sha256": {
+    "verified": 20,
+    "manifest": "data/next/sources.json"
+  },
+  "model_equivalence_and_order_independence": "latency-cpu.json",
+  "baseline_replay": "v18-replay-cpu.json",
+  "orchestrator_note": "Computational stages executed individually; combined run-next.sh syntax checked, not rerun end-to-end."
+}
