@@ -1,0 +1,383 @@
+{
+  "appearances": [
+    {
+      "case": 502,
+      "first": 392,
+      "last_partial": 392,
+      "kind": "solid",
+      "roi": [
+        320,
+        310,
+        550,
+        480
+      ],
+      "visible": "Narrow strip of CT at the left of the wooden door. Most of the model clears the edge on the next frame.",
+      "box": [
+        491,
+        337,
+        503,
+        414
+      ]
+    },
+    {
+      "case": 504,
+      "first": 259,
+      "last_partial": 260,
+      "kind": "mixed",
+      "roi": [
+        575,
+        275,
+        760,
+        470
+      ],
+      "visible": "Faint model behind the left stone pillar under residual flash. An earlier line at crosshair height could be equipment.",
+      "box": [
+        614,
+        321,
+        638,
+        417
+      ]
+    },
+    {
+      "case": 505,
+      "first": 464,
+      "last_partial": 478,
+      "kind": "solid",
+      "roi": [
+        600,
+        332,
+        690,
+        428
+      ],
+      "visible": "A bent strip of trouser leg emerges at the yellow corner. Ambiguous single-pixel edge changes precede it.",
+      "box": [
+        632,
+        371,
+        638,
+        396
+      ]
+    },
+    {
+      "case": 507,
+      "first": 687,
+      "last_partial": 688,
+      "kind": "solid",
+      "roi": [
+        533,
+        335,
+        692,
+        470
+      ],
+      "visible": "Dark portion of a sleeve at the left side of the foreground stone edge, followed by head and part of torso.",
+      "box": [
+        670,
+        366,
+        676,
+        378
+      ]
+    },
+    {
+      "case": 508,
+      "first": 497,
+      "last_partial": 500,
+      "kind": "solid",
+      "roi": [
+        583,
+        298,
+        738,
+        462
+      ],
+      "visible": "Dark part of CT beside an old mark on the wall; the mark is already present on the preceding frame.",
+      "box": [
+        682,
+        345,
+        691,
+        418
+      ]
+    },
+    {
+      "case": 510,
+      "first": 712,
+      "last_partial": 713,
+      "kind": "solid",
+      "roi": [
+        579,
+        340,
+        716,
+        432
+      ],
+      "visible": "Leg fragment at the left side of the lane next to the stone edge.",
+      "box": [
+        640,
+        368,
+        650,
+        395
+      ]
+    },
+    {
+      "case": 511,
+      "first": 1102,
+      "last_partial": 1114,
+      "kind": "mixed",
+      "roi": [
+        580,
+        297,
+        689,
+        411
+      ],
+      "visible": "Arm and side of T at the red pillar, with lower body hidden by the ledge and smoke. Ends at the last clear upright frame before the impact.",
+      "box": [
+        630,
+        340,
+        636,
+        368
+      ]
+    },
+    {
+      "case": 514,
+      "first": 376,
+      "last_partial": 378,
+      "kind": "solid",
+      "roi": [
+        592,
+        325,
+        712,
+        426
+      ],
+      "visible": "A thin strip of CT at the left jamb of the far room. A curved planter is present through the whole sequence.",
+      "box": [
+        662,
+        360,
+        669,
+        384
+      ]
+    },
+    {
+      "case": 516,
+      "first": 558,
+      "last_partial": 559,
+      "kind": "solid",
+      "roi": [
+        490,
+        170,
+        651,
+        344
+      ],
+      "visible": "T on the stairs seen through the arch. Thin edge detail at f557 is ambiguous; part of the body is clear at f558.",
+      "box": [
+        566,
+        231,
+        580,
+        268
+      ]
+    },
+    {
+      "case": 517,
+      "first": 556,
+      "last_partial": 557,
+      "kind": "effects",
+      "roi": [
+        482,
+        248,
+        755,
+        466
+      ],
+      "visible": "Head and torso are visible first through smoke, with lower legs hidden by fire.",
+      "box": [
+        685,
+        285,
+        727,
+        343
+      ]
+    },
+    {
+      "case": 518,
+      "first": 998,
+      "last_partial": 1000,
+      "kind": "solid",
+      "roi": [
+        542,
+        320,
+        665,
+        446
+      ],
+      "visible": "Boot and head-side fragment emerge from the door edge on Ancient.",
+      "box": [
+        587,
+        338,
+        594,
+        388
+      ]
+    },
+    {
+      "case": 520,
+      "first": 557,
+      "last_partial": 568,
+      "kind": "solid",
+      "roi": [
+        545,
+        300,
+        744,
+        453
+      ],
+      "visible": "CT on the left of the ramp. Covers the first 12 frames of clear partial occlusion while pressed to the wall.",
+      "box": [
+        606,
+        309,
+        619,
+        384
+      ]
+    },
+    {
+      "case": 522,
+      "first": 505,
+      "last_partial": 505,
+      "kind": "solid",
+      "roi": [
+        584,
+        332,
+        779,
+        448
+      ],
+      "visible": "Observer clears a tall box, cutting off the left leg on the first visible frame.",
+      "box": [
+        680,
+        352,
+        715,
+        418
+      ]
+    },
+    {
+      "case": 523,
+      "first": 285,
+      "last_partial": 287,
+      "kind": "solid",
+      "roi": [
+        608,
+        335,
+        703,
+        427
+      ],
+      "visible": "A small dark leg strip becomes distinct on the left of the right-hand stone wall.",
+      "box": [
+        644,
+        379,
+        648,
+        394
+      ]
+    },
+    {
+      "case": 525,
+      "first": 399,
+      "last_partial": 403,
+      "kind": "effects",
+      "roi": [
+        395,
+        270,
+        779,
+        464
+      ],
+      "visible": "First clear body shape beside the silo through smoke, with lower legs obscured by fire.",
+      "box": [
+        440,
+        241,
+        484,
+        311
+      ]
+    },
+    {
+      "case": 526,
+      "first": 600,
+      "last_partial": 600,
+      "kind": "solid",
+      "roi": [
+        556,
+        330,
+        870,
+        461
+      ],
+      "visible": "Back and leg immediately to the right of the yellow door. Later ally at the left jamb is outside the intended region.",
+      "box": [
+        617,
+        356,
+        638,
+        436
+      ]
+    },
+    {
+      "case": 528,
+      "first": 727,
+      "last_partial": 727,
+      "kind": "effects",
+      "roi": [
+        514,
+        279,
+        729,
+        471
+      ],
+      "visible": "Head above the smoke just before the cloud opens and exposes the body.",
+      "box": [
+        565,
+        329,
+        609,
+        365
+      ]
+    }
+  ],
+  "empty_windows": [
+    {
+      "case": 502,
+      "start": 326,
+      "stop": 386,
+      "note": "Wood doors and stacked crates."
+    },
+    {
+      "case": 503,
+      "start": 216,
+      "stop": 249,
+      "note": "Metal shutter and plaster before a brief enemy appearance."
+    },
+    {
+      "case": 503,
+      "start": 254,
+      "stop": 277,
+      "note": "Same scene, camera directed at the shutter after the enemy disappears."
+    },
+    {
+      "case": 510,
+      "start": 648,
+      "stop": 709,
+      "note": "Market truck and stone lane."
+    },
+    {
+      "case": 511,
+      "start": 1037,
+      "stop": 1090,
+      "note": "Smoke near the metal grille and low cover."
+    },
+    {
+      "case": 514,
+      "start": 316,
+      "stop": 371,
+      "note": "Dim corridor and green window."
+    },
+    {
+      "case": 518,
+      "start": 950,
+      "stop": 993,
+      "note": "Stone gateway and dark door."
+    },
+    {
+      "case": 526,
+      "start": 557,
+      "stop": 585,
+      "note": "Industrial corridor entrance as flash dissipates."
+    },
+    {
+      "case": 528,
+      "start": 708,
+      "stop": 725,
+      "note": "Dense smoke across scoped view."
+    }
+  ]
+}

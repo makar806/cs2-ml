@@ -1,0 +1,722 @@
+[
+  {
+    "case": 703,
+    "match_id": 2392995,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392995/map_name=de_dust2/round=07/player=00/video.mp4",
+    "bytes": 58632099,
+    "sha256": "2f399c935ed109bbb1654a349c509eaf9f2911d34d8520788f485fe82d81efbc",
+    "excerpt": {
+      "file": "media/703.mp4",
+      "first_frame": 992,
+      "bytes": 1940109,
+      "sha256": "fe586f070aa7c08d551b438c97e892c6ca353adbd44928939f2f51db2d727a70",
+      "verified_frames": 29
+    }
+  },
+  {
+    "case": 705,
+    "match_id": 2393125,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393125/map_name=de_dust2/round=07/player=02/video.mp4",
+    "bytes": 14594828,
+    "sha256": "c0372e51fd8f6c2c52f91d54025c172828093276fd8660b877e830598bb35e1c",
+    "excerpt": {
+      "file": "media/705.mp4",
+      "first_frame": 352,
+      "bytes": 1929081,
+      "sha256": "6eaebe3654fe4b831a07ec97a1aa7242edbfaf8fa91dfb3078390cf0794fbd81",
+      "verified_frames": 35
+    }
+  },
+  {
+    "case": 707,
+    "match_id": 2392195,
+    "map": "de_inferno",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392195/map_name=de_inferno/round=05/player=01/video.mp4",
+    "bytes": 21538012,
+    "sha256": "350cbb4aac3b9127b21ff36e8e2c6a1028cdb49ff80b273dab4e676472d69cfb",
+    "excerpt": {
+      "file": "media/707.mp4",
+      "first_frame": 736,
+      "bytes": 2269753,
+      "sha256": "7070a5e8d8f435355b1593c410a8404fa832cde9d4c28d935e87b112aa5aeb7e",
+      "verified_frames": 35
+    }
+  },
+  {
+    "case": 711,
+    "match_id": 2392614,
+    "map": "de_inferno",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392614/map_name=de_inferno/round=02/player=00/video.mp4",
+    "bytes": 23391926,
+    "sha256": "bc8d36fb219ef47bf2bcd99b2a589dc67d9b4cefc351e35cbb8aa8472efb1db4",
+    "excerpt": {
+      "file": "media/711.mp4",
+      "first_frame": 992,
+      "bytes": 1370619,
+      "sha256": "9488b9ad504ef2f2bd65fbad6bcd4756b9b4e55fae881d945fca8f8d69f01058",
+      "verified_frames": 41
+    }
+  },
+  {
+    "case": 713,
+    "match_id": 2392560,
+    "map": "de_mirage",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392560/map_name=de_mirage/round=13/player=05/video.mp4",
+    "bytes": 14347196,
+    "sha256": "65bdefb3dea12a821b71feed1c1d90e6d67b62bbd7d3bbb2bf5c94de4c12d078",
+    "excerpt": {
+      "file": "media/713.mp4",
+      "first_frame": 448,
+      "bytes": 1684680,
+      "sha256": "c2d7780a56ace81f992beb9c18b726b11e0b8e1f0e30fc0fa2c1ec9c21065aca",
+      "verified_frames": 31
+    }
+  },
+  {
+    "case": 716,
+    "match_id": 2393040,
+    "map": "de_mirage",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393040/map_name=de_mirage/round=11/player=04/video.mp4",
+    "bytes": 18078331,
+    "sha256": "d26c64406ee84d8bd20bbc780cf9cb944b9278eac6f0ba9883906652c6ecc983",
+    "excerpt": {
+      "file": "media/716.mp4",
+      "first_frame": 672,
+      "bytes": 1587791,
+      "sha256": "7e9e0c933d2694b72745229269cff7cc3a9ed27da09437b2f70832a4abd1919d",
+      "verified_frames": 28
+    }
+  },
+  {
+    "case": 720,
+    "match_id": 2393232,
+    "map": "de_ancient",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393232/map_name=de_ancient/round=11/player=04/video.mp4",
+    "bytes": 76187882,
+    "sha256": "34b8fe077105ed690204f7c5072be5069d900198706ccc429932ca4130b61432",
+    "excerpt": {
+      "file": "media/720.mp4",
+      "first_frame": 672,
+      "bytes": 2910830,
+      "sha256": "57f528307ce3bf170f93220ebdb32f72495a218a202050c22ec0eb9197bc5e20",
+      "verified_frames": 27
+    }
+  },
+  {
+    "case": 723,
+    "match_id": 2391935,
+    "map": "de_ancient",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2391935/map_name=de_ancient/round=09/player=02/video.mp4",
+    "bytes": 51949585,
+    "sha256": "1b47dc2c5e5e2598570a5fca0bdc45b688f6c40d763f4d75a9bd09c863f6ad27",
+    "excerpt": {
+      "file": "media/723.mp4",
+      "first_frame": 768,
+      "bytes": 2419742,
+      "sha256": "97b5974b29f9ec4e9bd2f59c917460816e7f5da57d20a8c741dbb0a8e393c184",
+      "verified_frames": 39
+    }
+  },
+  {
+    "case": 727,
+    "match_id": 2392608,
+    "map": "de_nuke",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392608/map_name=de_nuke/round=11/player=00/video.mp4",
+    "bytes": 24878077,
+    "sha256": "83b9b307c8c3626f42588f2f9bc5fba884ddaa67cdeb29d916c543e4c4b65a8f",
+    "excerpt": {
+      "file": "media/727.mp4",
+      "first_frame": 960,
+      "bytes": 2078136,
+      "sha256": "a0e55e9da69a62052cbad6c9c957434c1bfc6740c082befa08f2194c0844c08a",
+      "verified_frames": 28
+    }
+  },
+  {
+    "case": 502,
+    "match_id": 2393403,
+    "map": "de_dust2",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393403/map_name=de_dust2/round=07/player=03/video.mp4",
+    "bytes": 17452799,
+    "sha256": "6848dab28b7ffd7a4eecde53e7eb1c02a958dc02793f28028bcde162e8673c2e",
+    "excerpt": {
+      "file": "media/502.mp4",
+      "first_frame": 320,
+      "bytes": 2865325,
+      "sha256": "fe36c158b05149cdfdfeb68d1b0e1dca372bb263446fd0f636ff17589c5b616c",
+      "verified_frames": 88
+    }
+  },
+  {
+    "case": 503,
+    "match_id": 2393075,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393075/map_name=de_dust2/round=18/player=08/video.mp4",
+    "bytes": 27549950,
+    "sha256": "702f2f69813500c421612979769e4a93e7f0296f1cf50f3280fa638bf71cdb74",
+    "excerpt": {
+      "file": "media/503.mp4",
+      "first_frame": 192,
+      "bytes": 2743892,
+      "sha256": "8de36f7662c1b8712efbe5887ae7db7c4c1e9362fbc034bb59d4adb0ada721a8",
+      "verified_frames": 60
+    }
+  },
+  {
+    "case": 504,
+    "match_id": 2392334,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392334/map_name=de_dust2/round=13/player=07/video.mp4",
+    "bytes": 75812200,
+    "sha256": "e5ee7059ae1cfcb6fb0a0ddac94c00e7e9d37cf0c0ba1ec6490fd95e81a2ffba",
+    "excerpt": {
+      "file": "media/504.mp4",
+      "first_frame": 224,
+      "bytes": 1589629,
+      "sha256": "d141ff00738466b7ff1992f632ae20732958e674d9e523cb5f4fa98886658de2",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 505,
+    "match_id": 2392339,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392339/map_name=de_dust2/round=11/player=00/video.mp4",
+    "bytes": 21511377,
+    "sha256": "e8de05279772d1afe869af518048fdcb27df776f7b57e2f647bce222eb45a233",
+    "excerpt": {
+      "file": "media/505.mp4",
+      "first_frame": 448,
+      "bytes": 1833288,
+      "sha256": "f2818c51cc9852be2ef940d9f64fe7333f50e473fc46fd12dc3308922746dbef",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 507,
+    "match_id": 2391806,
+    "map": "de_inferno",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2391806/map_name=de_inferno/round=20/player=03/video.mp4",
+    "bytes": 25876072,
+    "sha256": "3f65f43fdb6ebf82c93bb4f2df05b3553f6471990fc67beab85d013872719cd4",
+    "excerpt": {
+      "file": "media/507.mp4",
+      "first_frame": 672,
+      "bytes": 2041185,
+      "sha256": "53e95c1c739b1b760f40044fab3ea7b0e74f6d98deb187776cb837052cc4322e",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 508,
+    "match_id": 2392708,
+    "map": "de_inferno",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392708/map_name=de_inferno/round=19/player=02/video.mp4",
+    "bytes": 16745752,
+    "sha256": "d004199a67b6f6b6ebdfd024a905cf31598364647c6080cafae29a24adc704e0",
+    "excerpt": {
+      "file": "media/508.mp4",
+      "first_frame": 480,
+      "bytes": 1318781,
+      "sha256": "3a058f9b7d0e922cf505216c5caf6c5a6fe6909728560eb555c7b5980c18beb6",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 510,
+    "match_id": 2393123,
+    "map": "de_inferno",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393123/map_name=de_inferno/round=06/player=00/video.mp4",
+    "bytes": 25922020,
+    "sha256": "a28d635eecd1a39ac09b7867a6ec1f94afdde94b6989986917479cfa74855f2c",
+    "excerpt": {
+      "file": "media/510.mp4",
+      "first_frame": 640,
+      "bytes": 2698677,
+      "sha256": "428eb51c6ddabe379083c575db1ccd9528a428da2fce78451919502439e4945f",
+      "verified_frames": 86
+    }
+  },
+  {
+    "case": 511,
+    "match_id": 2392727,
+    "map": "de_inferno",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392727/map_name=de_inferno/round=19/player=07/video.mp4",
+    "bytes": 76008458,
+    "sha256": "f5c2f5f3cb624c1169f38121d1e3e6787a4a604b51b495fc6a1a12652353e03e",
+    "excerpt": {
+      "file": "media/511.mp4",
+      "first_frame": 1024,
+      "bytes": 4165587,
+      "sha256": "9c95356f9feaac231878b939c33668b0c421f6dee607d54fc59291fdefc18d48",
+      "verified_frames": 81
+    }
+  },
+  {
+    "case": 514,
+    "match_id": 2392036,
+    "map": "de_mirage",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392036/map_name=de_mirage/round=22/player=09/video.mp4",
+    "bytes": 95604690,
+    "sha256": "4978ec8980f24da588347dbf33b275a659c1eb9adb4a4916cc37486ca82e0000",
+    "excerpt": {
+      "file": "media/514.mp4",
+      "first_frame": 288,
+      "bytes": 2824803,
+      "sha256": "58259503cbe6368eaa058221a469442c3057cdc152173003556e3b3494cfbc60",
+      "verified_frames": 82
+    }
+  },
+  {
+    "case": 516,
+    "match_id": 2392657,
+    "map": "de_mirage",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392657/map_name=de_mirage/round=16/player=01/video.mp4",
+    "bytes": 19921853,
+    "sha256": "0ed14ae0cbd0d83de4b625653d70243ed2e4d7a28339439d6969398b9bc5e486",
+    "excerpt": {
+      "file": "media/516.mp4",
+      "first_frame": 544,
+      "bytes": 1702998,
+      "sha256": "ed48e1d39ba0d1d2d86942d8adbe7a7c4d19ae7cce403f2fc648d42f18b1d6ec",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 517,
+    "match_id": 2393044,
+    "map": "de_mirage",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393044/map_name=de_mirage/round=12/player=08/video.mp4",
+    "bytes": 20646091,
+    "sha256": "b00f0be5801ecfa6787526883caed54d06f7c22a3eec227e4d061d3899f2c508",
+    "excerpt": {
+      "file": "media/517.mp4",
+      "first_frame": 544,
+      "bytes": 1316126,
+      "sha256": "8ccd602295b06d55c7880dcf9cde07afea297218a4e321c74c3917adf03eb33f",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 518,
+    "match_id": 2392320,
+    "map": "de_ancient",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392320/map_name=de_ancient/round=14/player=00/video.mp4",
+    "bytes": 46059954,
+    "sha256": "48665be9b0b8b557421e10b59d18b631fba7665dad328175415a45b586b71c21",
+    "excerpt": {
+      "file": "media/518.mp4",
+      "first_frame": 928,
+      "bytes": 3074823,
+      "sha256": "7446a5bd23bab285f804d2ffcc0c2a76a39860a654d101364433f649f0624b6b",
+      "verified_frames": 70
+    }
+  },
+  {
+    "case": 520,
+    "match_id": 2392798,
+    "map": "de_ancient",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392798/map_name=de_ancient/round=11/player=01/video.mp4",
+    "bytes": 27644682,
+    "sha256": "efde5b12f8407f4f07fd9addf971a9c1dbe4695584e3c16517ee66c35876184b",
+    "excerpt": {
+      "file": "media/520.mp4",
+      "first_frame": 544,
+      "bytes": 1904367,
+      "sha256": "1538285924b48b89084cba8cd46817503c38ffba538cdd58b4ece861d4e66c00",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 522,
+    "match_id": 2393255,
+    "map": "de_ancient",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393255/map_name=de_ancient/round=11/player=08/video.mp4",
+    "bytes": 16300748,
+    "sha256": "fbd4dcbdd46436b92fd57fb231d82e375e0a9028818880fd05dac1075298757c",
+    "excerpt": {
+      "file": "media/522.mp4",
+      "first_frame": 480,
+      "bytes": 2051202,
+      "sha256": "625b57ca1691117f34ea1b184c6ceccc8bc6601c27ceff4e80af5106cf7901fa",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 523,
+    "match_id": 2393227,
+    "map": "de_ancient",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393227/map_name=de_ancient/round=01/player=00/video.mp4",
+    "bytes": 50346451,
+    "sha256": "c67f001393d309e02dc4f74ece484aadfe6ad5a2a80d41c0c71b87c639033490",
+    "excerpt": {
+      "file": "media/523.mp4",
+      "first_frame": 256,
+      "bytes": 2145565,
+      "sha256": "6da3fd700fde71f0bb7e4d57de009e78539ddaf878206fe9606abefb9d50a3d2",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 525,
+    "match_id": 2393111,
+    "map": "de_nuke",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393111/map_name=de_nuke/round=16/player=08/video.mp4",
+    "bytes": 12770881,
+    "sha256": "1aaefffe14281342db97dfb9331d834be18ccbede2fdd34ebbd45d1de922d0f5",
+    "excerpt": {
+      "file": "media/525.mp4",
+      "first_frame": 384,
+      "bytes": 1419717,
+      "sha256": "79efd825ae6db5c0b549423b6b9a25f51ed72107f5e355b59f302e015feeae48",
+      "verified_frames": 26
+    }
+  },
+  {
+    "case": 526,
+    "match_id": 2392488,
+    "map": "de_nuke",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392488/map_name=de_nuke/round=03/player=07/video.mp4",
+    "bytes": 38191133,
+    "sha256": "784e79240d30f26ef8101ad799b6a16774291943059bde343eff71b34c3e30f0",
+    "excerpt": {
+      "file": "media/526.mp4",
+      "first_frame": 544,
+      "bytes": 2720985,
+      "sha256": "830d37d8dfc5c810c899e6340cb657eece5dfe1b96ddb1e4ecc83f88c908469f",
+      "verified_frames": 56
+    }
+  },
+  {
+    "case": 528,
+    "match_id": 2392458,
+    "map": "de_nuke",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392458/map_name=de_nuke/round=10/player=01/video.mp4",
+    "bytes": 45128506,
+    "sha256": "bcadad7e8f0772d2c44ca1dfab7642b2c71f1b14c210f474f6bf81d570402835",
+    "excerpt": {
+      "file": "media/528.mp4",
+      "first_frame": 704,
+      "bytes": 1353070,
+      "sha256": "3baa1a1159704303bc472464fd34fcd85c189e3e4f3dca9a120cf1901059a24c",
+      "verified_frames": 41
+    }
+  },
+  {
+    "case": 601,
+    "match_id": 2393066,
+    "map": "de_dust2",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393066/map_name=de_dust2/round=03/player=06/video.mp4",
+    "bytes": 23892239,
+    "sha256": "dd08a765fca05699e8dfe9a7eef2c66da52d1d365645f82e1beaa3a37b13e710",
+    "excerpt": {
+      "file": "media/601.mp4",
+      "first_frame": 1024,
+      "bytes": 1265081,
+      "sha256": "dd033d8d3e6e8f130f98849a23ee9cb620f9be60b3bf25bd1906929e7a584e98",
+      "verified_frames": 6
+    }
+  },
+  {
+    "case": 602,
+    "match_id": 2393015,
+    "map": "de_dust2",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393015/map_name=de_dust2/round=12/player=05/video.mp4",
+    "bytes": 26163921,
+    "sha256": "15f426a3ab3b0e1c7a1c58d667d586771ebc99a27034858e5de43a0a0b87c1ae",
+    "excerpt": {
+      "file": "media/602.mp4",
+      "first_frame": 640,
+      "bytes": 814350,
+      "sha256": "c4405e692c71255de25fc66a4ad5d858fe17a18db68f58437aaa349e10eb769a",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 603,
+    "match_id": 2392387,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392387/map_name=de_dust2/round=11/player=02/video.mp4",
+    "bytes": 15750307,
+    "sha256": "40c25c05efcaca2f64a552b06a912d6d823186a0cb60e375f86cc3a7bc717929",
+    "excerpt": {
+      "file": "media/603.mp4",
+      "first_frame": 448,
+      "bytes": 1049657,
+      "sha256": "e137cbd1942fce5a7148c09308da85488c53a7faadbc8d3d2b46d708284052c0",
+      "verified_frames": 8
+    }
+  },
+  {
+    "case": 605,
+    "match_id": 2393029,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393029/map_name=de_dust2/round=23/player=07/video.mp4",
+    "bytes": 17430175,
+    "sha256": "5a54fb7b6a2fbc7d7057e5e6bc50389a3d745f0b743c2fc17d012b35bfb922a5",
+    "excerpt": {
+      "file": "media/605.mp4",
+      "first_frame": 480,
+      "bytes": 910690,
+      "sha256": "22e7b6c47f31021122e5b1f3e4f68333eed2080bc0239ea2975023440ef647c7",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 606,
+    "match_id": 2392038,
+    "map": "de_mirage",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392038/map_name=de_mirage/round=04/player=00/video.mp4",
+    "bytes": 31087991,
+    "sha256": "7b3c80c2a71469209d6c4df491d8b27c4027e24bfc12c4ea6ffabda3d1e9eef4",
+    "excerpt": {
+      "file": "media/606.mp4",
+      "first_frame": 448,
+      "bytes": 768652,
+      "sha256": "0fc957c1e4fad07c784041c069d40ca0eca2b14da778f0140929fba6fe5a13f7",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 612,
+    "match_id": 2392864,
+    "map": "de_inferno",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392864/map_name=de_inferno/round=12/player=02/video.mp4",
+    "bytes": 66889181,
+    "sha256": "38f644acdb4fc75d608be8201ad8b08ad23b3aa8e916bb8863491a92a81ab919",
+    "excerpt": {
+      "file": "media/612.mp4",
+      "first_frame": 544,
+      "bytes": 1696471,
+      "sha256": "eae68f8d1f3725552338fc4e57a198aa8b8851e4ceb98576e75886f50720ca54",
+      "verified_frames": 10
+    }
+  },
+  {
+    "case": 614,
+    "match_id": 2393258,
+    "map": "de_inferno",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393258/map_name=de_inferno/round=03/player=02/video.mp4",
+    "bytes": 84358537,
+    "sha256": "0b9b9fd8f5d8fa3ee4be40e6e69e3ef5e411235af7a22df6ac930918d2940eea",
+    "excerpt": {
+      "file": "media/614.mp4",
+      "first_frame": 768,
+      "bytes": 1112418,
+      "sha256": "d29eb8004ca589fb96c62d82e414c3cde38bc036804258e4c698456c0aa88df3",
+      "verified_frames": 5
+    }
+  },
+  {
+    "case": 615,
+    "match_id": 2392362,
+    "map": "de_inferno",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392362/map_name=de_inferno/round=03/player=09/video.mp4",
+    "bytes": 48300221,
+    "sha256": "d381a8dd7397836c3c82396ab58a66dc5a262607f93d86b6b6e230b35fb4750d",
+    "excerpt": {
+      "file": "media/615.mp4",
+      "first_frame": 416,
+      "bytes": 2169490,
+      "sha256": "48b8afb6f7b3e277b98533b45bc2df4f084c5e82a70a686bac616e3e2ead0845",
+      "verified_frames": 8
+    }
+  },
+  {
+    "case": 616,
+    "match_id": 2392616,
+    "map": "de_inferno",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392616/map_name=de_inferno/round=19/player=05/video.mp4",
+    "bytes": 40233762,
+    "sha256": "cd8791cb2ac98dfcc88c80b6d2a2fe2f48c22269a71b3ee09b9289c373ee1d79",
+    "excerpt": {
+      "file": "media/616.mp4",
+      "first_frame": 512,
+      "bytes": 2996739,
+      "sha256": "60c8216f911ba58d3e72d4d95002861189084e709e398bceac5017938598e93b",
+      "verified_frames": 6
+    }
+  },
+  {
+    "case": 618,
+    "match_id": 2392570,
+    "map": "de_ancient",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392570/map_name=de_ancient/round=07/player=03/video.mp4",
+    "bytes": 27276491,
+    "sha256": "f82c727bc5dca53a300b0b441084c8d4a008339dbf51348b6f52e7daddc0cb55",
+    "excerpt": {
+      "file": "media/618.mp4",
+      "first_frame": 672,
+      "bytes": 1062872,
+      "sha256": "03a74329b430f89d8bd58c314762da0e7ef32ce5d42668c8f651952347bd5efc",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 621,
+    "match_id": 2392281,
+    "map": "de_ancient",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392281/map_name=de_ancient/round=12/player=08/video.mp4",
+    "bytes": 57947383,
+    "sha256": "584effdeb05a8c4c95a1c43a1e4b81b6afffe8122a91b6a3d133d56b78625fe4",
+    "excerpt": {
+      "file": "media/621.mp4",
+      "first_frame": 416,
+      "bytes": 996955,
+      "sha256": "021613ee8818fb9b1eb50ae267241a46fabfca9829230013fd67ba935ec30b1d",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 622,
+    "match_id": 2393235,
+    "map": "de_ancient",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393235/map_name=de_ancient/round=14/player=03/video.mp4",
+    "bytes": 21036725,
+    "sha256": "ea5270cefc8272f95da1471e8baa90feca07a353d2a645f1b3dc5f0a42073663",
+    "excerpt": {
+      "file": "media/622.mp4",
+      "first_frame": 608,
+      "bytes": 894712,
+      "sha256": "9ae0769ea7901079c426b7980c58ad256ea8a175d341fe444a8c24f4adb97cb2",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 624,
+    "match_id": 2392660,
+    "map": "de_nuke",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392660/map_name=de_nuke/round=19/player=00/video.mp4",
+    "bytes": 76920384,
+    "sha256": "dbad1f836302bc5f199c201f430dd3bde8e493d34d5a32ac8ca9875986cf11d0",
+    "excerpt": {
+      "file": "media/624.mp4",
+      "first_frame": 768,
+      "bytes": 748271,
+      "sha256": "5b90f86bdb9e0e126eabe87755df81c64233d308f6e50b2ed4a817d193e36ca2",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 627,
+    "match_id": 2392199,
+    "map": "de_nuke",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392199/map_name=de_nuke/round=02/player=00/video.mp4",
+    "bytes": 48770272,
+    "sha256": "e0a28f975d3de7602c88e68f23e86eb2e2b25ec65780e49c0fdd44b76f07ac19",
+    "excerpt": {
+      "file": "media/627.mp4",
+      "first_frame": 512,
+      "bytes": 1194851,
+      "sha256": "68902e47186582e58c602e63de766321e205057e1cb4755a9b7c53ea033a22f7",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 628,
+    "match_id": 2392550,
+    "map": "de_nuke",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392550/map_name=de_nuke/round=11/player=00/video.mp4",
+    "bytes": 21772654,
+    "sha256": "490d5ad45eca9358795346d2e41955c73cdc623a36b0cf76873171ad338a2495",
+    "excerpt": {
+      "file": "media/628.mp4",
+      "first_frame": 640,
+      "bytes": 1958581,
+      "sha256": "e2605dc868863e3dd0b387113d90e9aa49dc1ba098e68e7529f7bb4f956af1f6",
+      "verified_frames": 8
+    }
+  },
+  {
+    "case": 630,
+    "match_id": 2393247,
+    "map": "de_dust2",
+    "side": 1,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2393247/map_name=de_dust2/round=21/player=07/video.mp4",
+    "bytes": 11646239,
+    "sha256": "848253e21a5d27ea6b629ae22e5fe4f2ca295600be0e067e11613e3fcc5832d9",
+    "excerpt": {
+      "file": "media/630.mp4",
+      "first_frame": 320,
+      "bytes": 982238,
+      "sha256": "e4225279e164f2416109a39af13d6cdccd30bef1ef99f1522918c6755f09f725",
+      "verified_frames": 8
+    }
+  },
+  {
+    "case": 633,
+    "match_id": 2392933,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392933/map_name=de_dust2/round=06/player=00/video.mp4",
+    "bytes": 20598345,
+    "sha256": "8309009567d96be4fb9482dedf4be28deb593df3bd51f962d6e70824a9d79e0e",
+    "excerpt": {
+      "file": "media/633.mp4",
+      "first_frame": 640,
+      "bytes": 1914582,
+      "sha256": "93dbafe5a7cc14f22892803399d5af4bfcaf56be06578a6eac2531f421b484f2",
+      "verified_frames": 7
+    }
+  },
+  {
+    "case": 634,
+    "match_id": 2392482,
+    "map": "de_dust2",
+    "side": 0,
+    "url": "https://huggingface.co/datasets/blanchon/opencs2_dataset/resolve/main/rounds/match_id=2392482/map_name=de_dust2/round=10/player=00/video.mp4",
+    "bytes": 55797219,
+    "sha256": "6e15d851d47a033e6ff2bd84ffb81e7be297f3a46794a652a153ff0dd7e76610",
+    "excerpt": {
+      "file": "media/634.mp4",
+      "first_frame": 1024,
+      "bytes": 894984,
+      "sha256": "f06abf4824ea4e621bac73143ab0c06f170756759254c4d46a4706b15cc0ee12",
+      "verified_frames": 7
+    }
+  }
+]

@@ -1,0 +1,4 @@
+!/data/
+!/data/**
+/.cache/
+/replay*.json

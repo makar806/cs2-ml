@@ -1,0 +1,11 @@
+[
+  {"case":703,"first":1028,"last_partial":1029,"roi":[455,335,625,474],"box":[538,401,554,438],"empty":[1000,1024],"note":"The trouser leg and boot appear at the near corner. Firearm kept outside the fragment box."},
+  {"case":705,"first":397,"last_partial":397,"roi":[524,315,632,421],"box":[591,335,600,383],"empty":[362,393],"note":"The nearest player's arm and leg are revealed as the camera clears the tunnel. Other players become visible at the next frame."},
+  {"case":707,"first":779,"last_partial":780,"roi":[453,330,645,464],"box":[512,342,518,355],"empty":[744,774],"note":"Dark sleeve at the edge of the column. Head and visible torso follow on the next frame."},
+  {"case":711,"first":1047,"last_partial":1048,"roi":[557,346,690,446],"box":[633,380,644,413],"empty":[1007,1043],"note":"Dark trouser leg emerges from the right wall against the bright steps."},
+  {"case":713,"first":504,"last_partial":505,"roi":[560,331,688,431],"box":[637,350,643,365],"empty":[473,499],"note":"Narrow sleeve on the blue wall edge after the flash clears."},
+  {"case":716,"first":703,"last_partial":711,"roi":[586,330,704,450],"box":[623,352,627,383],"empty":[683,699],"note":"The target remains partly covered by the blue wall. The marked interval ends at the last reviewed partial frame."},
+  {"case":720,"first":724,"last_partial":725,"roi":[490,335,680,455],"box":[601,353,622,375],"empty":[699,721],"note":"Helmet and shoulder first become distinct on the left of the inclined stone block."},
+  {"case":723,"first":827,"last_partial":832,"roi":[558,339,713,483],"box":[652,389,665,408],"empty":[792,822],"note":"Leg appears to the left of the pipe, followed by the same player's hand and head."},
+  {"case":727,"first":1004,"last_partial":1008,"roi":[570,339,714,450],"box":[651,389,655,405],"empty":[979,999],"note":"First visible part of the leg beside the blue container. An older wheel highlight was visible while the player was hidden."}
+]

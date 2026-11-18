@@ -1,6 +1,8 @@
 # CS2 ML Agent
 
-**Ветка передачи от 10 ноября 2026.** Начни с [актуального хэндофа](HANDOFF_CS2_ML_2026-11-10.md), [задания](docs/next-agent-prompt.md) и [инструкции по комплекту](docs/handoff-package.md). Панель в этой ветке — v3.31, основной батник — `start-mvp-recorded.cmd`. Ниже сохранено описание раннего MVP.
+**Хэндоф от 18 ноября 2026 года** — [раннее обнаружение за укрытием](research/early-occlusion/README.md), [короткий промпт](research/early-occlusion/PROMPT.md) и [результаты](research/early-occlusion/FINDINGS.md).
+
+**Предыдущий хэндоф от 10 ноября 2026 года** описывает панель v3.31 и запуск через `start-mvp-recorded.cmd`. [Хэндоф](HANDOFF_CS2_ML_2026-11-10.md) · [Задание](docs/next-agent-prompt.md) · [Состав комплекта](docs/handoff-package.md)
 
 Учебный проект: детекция T/CT, затем наведение и стрельба в контролируемой среде.
 

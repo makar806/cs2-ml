@@ -1,0 +1,637 @@
+{
+  "weights_sha256": "8fded5609c51faa1b758c4b06f52d8a7e6a33f10e5677c072a40bc89a20ca677",
+  "summary": {
+    "solid_firsts": {
+      "total": 12,
+      "score_at_least_13": 6,
+      "score_below_03": 5,
+      "score_03_to_13": 1
+    },
+    "additional_fragments": {
+      "total": 17,
+      "score_at_least_13": 4,
+      "score_below_03": 8,
+      "score_03_to_13": 5
+    },
+    "additional_at_most_eight": {
+      "total": 7,
+      "score_below_03": 3,
+      "score_03_to_13": 3,
+      "score_at_least_13": 1
+    }
+  },
+  "samples": [
+    {
+      "group": "previous_review",
+      "case": 502,
+      "frame": 392,
+      "kind": "solid",
+      "box": [
+        491,
+        337,
+        503,
+        414
+      ],
+      "side": 1,
+      "width_1280": 16.0,
+      "geometry_iou": 0.7179957628250122,
+      "overlaps": 57,
+      "presence": 0.306640625,
+      "correct_side": 0.19873046875
+    },
+    {
+      "group": "previous_review",
+      "case": 504,
+      "frame": 259,
+      "kind": "mixed",
+      "box": [
+        614,
+        321,
+        638,
+        417
+      ],
+      "side": 0,
+      "width_1280": 32.0,
+      "geometry_iou": 0.8645599484443665,
+      "overlaps": 93,
+      "presence": 7.3909759521484375e-06,
+      "correct_side": 7.033348083496094e-06
+    },
+    {
+      "group": "previous_review",
+      "case": 505,
+      "frame": 464,
+      "kind": "solid",
+      "box": [
+        632,
+        371,
+        638,
+        396
+      ],
+      "side": 0,
+      "width_1280": 8.0,
+      "geometry_iou": 0.7960057854652405,
+      "overlaps": 22,
+      "presence": 2.205371856689453e-06,
+      "correct_side": 1.8477439880371094e-06
+    },
+    {
+      "group": "previous_review",
+      "case": 507,
+      "frame": 687,
+      "kind": "solid",
+      "box": [
+        670,
+        366,
+        676,
+        378
+      ],
+      "side": 1,
+      "width_1280": 8.0,
+      "geometry_iou": 0.5034613013267517,
+      "overlaps": 12,
+      "presence": 2.092123031616211e-05,
+      "correct_side": 2.9802322387695312e-05
+    },
+    {
+      "group": "previous_review",
+      "case": 508,
+      "frame": 497,
+      "kind": "solid",
+      "box": [
+        682,
+        345,
+        691,
+        418
+      ],
+      "side": 1,
+      "width_1280": 12.0,
+      "geometry_iou": 0.4749758243560791,
+      "overlaps": 40,
+      "presence": 1.4901161193847656e-06,
+      "correct_side": 1.6093254089355469e-06
+    },
+    {
+      "group": "previous_review",
+      "case": 510,
+      "frame": 712,
+      "kind": "solid",
+      "box": [
+        640,
+        368,
+        650,
+        395
+      ],
+      "side": 0,
+      "width_1280": 13.333333333333334,
+      "geometry_iou": 0.7064220309257507,
+      "overlaps": 56,
+      "presence": 0.642578125,
+      "correct_side": 0.66357421875
+    },
+    {
+      "group": "previous_review",
+      "case": 511,
+      "frame": 1102,
+      "kind": "mixed",
+      "box": [
+        630,
+        340,
+        636,
+        368
+      ],
+      "side": 0,
+      "width_1280": 8.0,
+      "geometry_iou": 0.7638950347900391,
+      "overlaps": 40,
+      "presence": 0.045196533203125,
+      "correct_side": 0.026153564453125
+    },
+    {
+      "group": "previous_review",
+      "case": 514,
+      "frame": 376,
+      "kind": "solid",
+      "box": [
+        662,
+        360,
+        669,
+        384
+      ],
+      "side": 1,
+      "width_1280": 9.333333333333334,
+      "geometry_iou": 0.6791836619377136,
+      "overlaps": 35,
+      "presence": 0.064208984375,
+      "correct_side": 0.0180206298828125
+    },
+    {
+      "group": "previous_review",
+      "case": 516,
+      "frame": 558,
+      "kind": "solid",
+      "box": [
+        566,
+        231,
+        580,
+        268
+      ],
+      "side": 0,
+      "width_1280": 18.666666666666668,
+      "geometry_iou": 0.8448522090911865,
+      "overlaps": 77,
+      "presence": 0.259033203125,
+      "correct_side": 0.60595703125
+    },
+    {
+      "group": "previous_review",
+      "case": 517,
+      "frame": 556,
+      "kind": "effects",
+      "box": [
+        685,
+        285,
+        727,
+        343
+      ],
+      "side": 0,
+      "width_1280": 56.0,
+      "geometry_iou": 0.8588628768920898,
+      "overlaps": 122,
+      "presence": 0.46875,
+      "correct_side": 0.7294921875
+    },
+    {
+      "group": "previous_review",
+      "case": 518,
+      "frame": 998,
+      "kind": "solid",
+      "box": [
+        587,
+        338,
+        594,
+        388
+      ],
+      "side": 1,
+      "width_1280": 9.333333333333334,
+      "geometry_iou": 0.7707270979881287,
+      "overlaps": 52,
+      "presence": 0.0003542900085449219,
+      "correct_side": 0.0002758502960205078
+    },
+    {
+      "group": "previous_review",
+      "case": 520,
+      "frame": 557,
+      "kind": "solid",
+      "box": [
+        606,
+        309,
+        619,
+        384
+      ],
+      "side": 1,
+      "width_1280": 17.333333333333332,
+      "geometry_iou": 0.9281250238418579,
+      "overlaps": 73,
+      "presence": 0.5068359375,
+      "correct_side": 0.77783203125
+    },
+    {
+      "group": "previous_review",
+      "case": 522,
+      "frame": 505,
+      "kind": "solid",
+      "box": [
+        680,
+        352,
+        715,
+        418
+      ],
+      "side": 0,
+      "width_1280": 46.666666666666664,
+      "geometry_iou": 0.9503398537635803,
+      "overlaps": 101,
+      "presence": 0.63427734375,
+      "correct_side": 0.89306640625
+    },
+    {
+      "group": "previous_review",
+      "case": 523,
+      "frame": 285,
+      "kind": "solid",
+      "box": [
+        644,
+        379,
+        648,
+        394
+      ],
+      "side": 0,
+      "width_1280": 5.333333333333333,
+      "geometry_iou": 0.6937573552131653,
+      "overlaps": 13,
+      "presence": 0.004199981689453125,
+      "correct_side": 0.0008296966552734375
+    },
+    {
+      "group": "previous_review",
+      "case": 525,
+      "frame": 399,
+      "kind": "effects",
+      "box": [
+        440,
+        241,
+        484,
+        311
+      ],
+      "side": 1,
+      "width_1280": 58.666666666666664,
+      "geometry_iou": 0.9007125496864319,
+      "overlaps": 164,
+      "presence": 1.1682510375976562e-05,
+      "correct_side": 1.4722347259521484e-05
+    },
+    {
+      "group": "previous_review",
+      "case": 526,
+      "frame": 600,
+      "kind": "solid",
+      "box": [
+        617,
+        356,
+        638,
+        436
+      ],
+      "side": 1,
+      "width_1280": 28.0,
+      "geometry_iou": 0.9266182780265808,
+      "overlaps": 102,
+      "presence": 0.80419921875,
+      "correct_side": 0.83642578125
+    },
+    {
+      "group": "previous_review",
+      "case": 528,
+      "frame": 727,
+      "kind": "effects",
+      "box": [
+        565,
+        329,
+        609,
+        365
+      ],
+      "side": 0,
+      "width_1280": 58.666666666666664,
+      "geometry_iou": 0.7787445187568665,
+      "overlaps": 68,
+      "presence": 0.01495361328125,
+      "correct_side": 0.01763916015625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 601,
+      "frame": 1053,
+      "kind": "de_dust2",
+      "box": [
+        641,
+        366,
+        649,
+        409
+      ],
+      "side": 1,
+      "width_1280": 10.666666666666666,
+      "geometry_iou": 0.8355393409729004,
+      "overlaps": 58,
+      "presence": 0.525390625,
+      "correct_side": 0.58056640625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 602,
+      "frame": 651,
+      "kind": "de_dust2",
+      "box": [
+        639,
+        318,
+        665,
+        424
+      ],
+      "side": 1,
+      "width_1280": 34.666666666666664,
+      "geometry_iou": 0.859174907207489,
+      "overlaps": 81,
+      "presence": 0.00020182132720947266,
+      "correct_side": 0.0004878044128417969
+    },
+    {
+      "group": "additional_fragments",
+      "case": 603,
+      "frame": 463,
+      "kind": "de_dust2",
+      "box": [
+        645,
+        355,
+        653,
+        407
+      ],
+      "side": 0,
+      "width_1280": 10.666666666666666,
+      "geometry_iou": 0.718737781047821,
+      "overlaps": 64,
+      "presence": 0.0208892822265625,
+      "correct_side": 0.01450347900390625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 605,
+      "frame": 492,
+      "kind": "de_dust2",
+      "box": [
+        634,
+        358,
+        646,
+        434
+      ],
+      "side": 0,
+      "width_1280": 16.0,
+      "geometry_iou": 0.8570343852043152,
+      "overlaps": 56,
+      "presence": 0.350341796875,
+      "correct_side": 0.34423828125
+    },
+    {
+      "group": "additional_fragments",
+      "case": 606,
+      "frame": 452,
+      "kind": "de_mirage",
+      "box": [
+        633,
+        369,
+        637,
+        411
+      ],
+      "side": 1,
+      "width_1280": 5.333333333333333,
+      "geometry_iou": 0.5948804020881653,
+      "overlaps": 32,
+      "presence": 0.0003554821014404297,
+      "correct_side": 0.0004954338073730469
+    },
+    {
+      "group": "additional_fragments",
+      "case": 612,
+      "frame": 576,
+      "kind": "de_inferno",
+      "box": [
+        749,
+        364,
+        755,
+        375
+      ],
+      "side": 1,
+      "width_1280": 8.0,
+      "geometry_iou": 0.5356738567352295,
+      "overlaps": 24,
+      "presence": 0.05706787109375,
+      "correct_side": 0.025665283203125
+    },
+    {
+      "group": "additional_fragments",
+      "case": 614,
+      "frame": 789,
+      "kind": "de_inferno",
+      "box": [
+        625,
+        365,
+        640,
+        398
+      ],
+      "side": 1,
+      "width_1280": 20.0,
+      "geometry_iou": 0.7083372473716736,
+      "overlaps": 52,
+      "presence": 0.007289886474609375,
+      "correct_side": 0.0192413330078125
+    },
+    {
+      "group": "additional_fragments",
+      "case": 615,
+      "frame": 447,
+      "kind": "de_inferno",
+      "box": [
+        719,
+        365,
+        730,
+        379
+      ],
+      "side": 0,
+      "width_1280": 14.666666666666666,
+      "geometry_iou": 0.6407185792922974,
+      "overlaps": 25,
+      "presence": 0.076416015625,
+      "correct_side": 0.056640625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 618,
+      "frame": 684,
+      "kind": "de_ancient",
+      "box": [
+        646,
+        371,
+        654,
+        387
+      ],
+      "side": 1,
+      "width_1280": 10.666666666666666,
+      "geometry_iou": 0.5989164113998413,
+      "overlaps": 33,
+      "presence": 0.004467010498046875,
+      "correct_side": 0.00400543212890625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 621,
+      "frame": 432,
+      "kind": "de_ancient",
+      "box": [
+        634,
+        370,
+        646,
+        426
+      ],
+      "side": 0,
+      "width_1280": 16.0,
+      "geometry_iou": 0.7443405985832214,
+      "overlaps": 46,
+      "presence": 0.102294921875,
+      "correct_side": 0.0885009765625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 622,
+      "frame": 627,
+      "kind": "de_ancient",
+      "box": [
+        623,
+        398,
+        628,
+        419
+      ],
+      "side": 0,
+      "width_1280": 6.666666666666667,
+      "geometry_iou": 0.6000000238418579,
+      "overlaps": 22,
+      "presence": 2.282857894897461e-05,
+      "correct_side": 1.8775463104248047e-05
+    },
+    {
+      "group": "additional_fragments",
+      "case": 624,
+      "frame": 788,
+      "kind": "de_nuke",
+      "box": [
+        639,
+        359,
+        648,
+        401
+      ],
+      "side": 1,
+      "width_1280": 12.0,
+      "geometry_iou": 0.8634265065193176,
+      "overlaps": 70,
+      "presence": 0.80810546875,
+      "correct_side": 0.76708984375
+    },
+    {
+      "group": "additional_fragments",
+      "case": 627,
+      "frame": 520,
+      "kind": "de_nuke",
+      "box": [
+        577,
+        372,
+        583,
+        395
+      ],
+      "side": 0,
+      "width_1280": 8.0,
+      "geometry_iou": 0.6940024495124817,
+      "overlaps": 36,
+      "presence": 0.2127685546875,
+      "correct_side": 0.1280517578125
+    },
+    {
+      "group": "additional_fragments",
+      "case": 628,
+      "frame": 676,
+      "kind": "de_nuke",
+      "box": [
+        610,
+        398,
+        615,
+        424
+      ],
+      "side": 0,
+      "width_1280": 6.666666666666667,
+      "geometry_iou": 0.8391608595848083,
+      "overlaps": 37,
+      "presence": 0.006641387939453125,
+      "correct_side": 0.0021152496337890625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 630,
+      "frame": 336,
+      "kind": "de_dust2",
+      "box": [
+        596,
+        365,
+        602,
+        396
+      ],
+      "side": 1,
+      "width_1280": 8.0,
+      "geometry_iou": 0.8536695241928101,
+      "overlaps": 60,
+      "presence": 0.09466552734375,
+      "correct_side": 0.02056884765625
+    },
+    {
+      "group": "additional_fragments",
+      "case": 633,
+      "frame": 673,
+      "kind": "de_dust2",
+      "box": [
+        636,
+        364,
+        642,
+        387
+      ],
+      "side": 0,
+      "width_1280": 8.0,
+      "geometry_iou": 0.8913643956184387,
+      "overlaps": 38,
+      "presence": 0.1229248046875,
+      "correct_side": 0.1778564453125
+    },
+    {
+      "group": "additional_fragments",
+      "case": 634,
+      "frame": 1030,
+      "kind": "de_dust2",
+      "box": [
+        645,
+        372,
+        653,
+        419
+      ],
+      "side": 0,
+      "width_1280": 10.666666666666666,
+      "geometry_iou": 0.7788511514663696,
+      "overlaps": 64,
+      "presence": 0.011688232421875,
+      "correct_side": 0.0102081298828125
+    }
+  ]
+}
